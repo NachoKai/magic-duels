@@ -18,6 +18,7 @@ Defensive   > Aggressive
 * When both characters choose the same stance the round will tie and both can be healed, damaged or nothing depending the action.
 
 * Table
+```
 ______________________________________________________________
 			                USER	
 		    DEF	            SNE             AGG
@@ -27,6 +28,7 @@ COMP	SNE	0 comp win -2	-1   tie   -1	-2 user win 0
 
 	    AGG	-1 user win +1	0 comp win -2	0   tie     0
 ______________________________________________________________
+```
 
 ! Health: 100 HP
 
