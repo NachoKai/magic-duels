@@ -87,6 +87,9 @@ function resetGame() {
     document.getElementById('defensive').onclick = playDefensive;
     document.getElementById('sneaky').onclick = playSneaky;
     document.getElementById('aggressive').onclick = playAggressive;
+    document.getElementById('spells-defensive').className = "defensive hidden"
+    document.getElementById('spells-sneaky').className = "sneaky hidden"
+    document.getElementById('spells-aggressive').className = "aggressive hidden"
 };
 
 function gameVictory() {
