@@ -146,6 +146,7 @@ function gameOver() {
 function expelliarmus() {
     /* -10dmg / chance stun 1 turn*/
     compHealth = compHealth - 10
+    document.getElementById('winner').innerHTML = "Expelliarmus deals 10 dmg! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
@@ -154,6 +155,7 @@ function incendio() {
     /* -5dmg / chance -10dmg 2 turns*/
     let incendio = document.getElementById('incendio')
     compHealth = compHealth - 5
+    document.getElementById('winner').innerHTML = "Incendio deals 5 dmg! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
@@ -162,6 +164,7 @@ function depulso() {
     /* -17dmg*/
     let depulso = document.getElementById('depulso')
     compHealth = compHealth - 17
+    document.getElementById('winner').innerHTML = "Depulso deals 17 dmg! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
@@ -170,6 +173,7 @@ function confringo() {
     /* -5dmg / chance stun 2 turns*/
     let confringo = document.getElementById('confringo')
     compHealth = compHealth - 5
+    document.getElementById('winner').innerHTML = "Confringo deals 5 dmg! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
@@ -211,7 +215,8 @@ function wiggenweld() {
     let wiggenweld = document.getElementById('wiggenweld')
     playerHealth = playerHealth + 5
     document.getElementById('playerHealth').innerHTML = playerHealth;
-    document.getElementById('spells-sneaky').className = "defensive hidden"
+    document.getElementById('spells-defensive').className = "defensive hidden"
+    userMaxHealth()
 }
 
 function episkey() {
@@ -219,7 +224,8 @@ function episkey() {
     let episkey = document.getElementById('episkey')
     playerHealth = playerHealth + 10
     document.getElementById('playerHealth').innerHTML = playerHealth;
-    document.getElementById('spells-sneaky').className = "defensive hidden"
+    document.getElementById('spells-defensive').className = "defensive hidden"
+    userMaxHealth()
 }
 
 function petrificus() {
@@ -227,7 +233,7 @@ function petrificus() {
     let petrificus = document.getElementById('petrificus')
     compHealth = compHealth - 5
     document.getElementById('compHealth').innerHTML = compHealth;
-    document.getElementById('spells-sneaky').className = "defensive hidden"
+    document.getElementById('spells-defensive').className = "defensive hidden"
 }
 
 function bombarda() {
@@ -235,5 +241,23 @@ function bombarda() {
     let bombarda = document.getElementById('bombarda')
     compHealth = compHealth - 10
     document.getElementById('compHealth').innerHTML = compHealth;
-    document.getElementById('spells-sneaky').className = "defensive hidden"
+    document.getElementById('spells-defensive').className = "defensive hidden"
 }
+
+/* Function no more than 100 health points*/
+
+function userMaxHealth() {
+    document.getElementById('playerHealth').innerHTML = playerHealth;
+    if (playerHealth > 100) {
+        playerHealth = 100
+    }
+}
+
+function compMaxHealth() {
+    document.getElementById('compHealth').innerHTML = compHealth;
+    if (compHealth > 100) {
+        compHealth = 100
+    }
+}
+
+compMaxHealth()
