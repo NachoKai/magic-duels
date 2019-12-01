@@ -7,8 +7,14 @@
     user-select: none;
 }
 
+html {
+    background-color: #000 !important;
+    color: #fff;
+}
+
 body {
     background-color: #000 !important;
+    color: #fff;
     text-align: center;
 }
 
@@ -22,11 +28,15 @@ p {
 }
 
 .container {
+    background-color: #000 !important;
+    color: #fff;
     min-width: 98vw;
     min-height: calc(100vh - 25px);
 }
 
 .gamebox {
+    background-color: #000 !important;
+    color: #fff;
     padding-bottom: 10px;
     padding-top: 10px;
     text-align: center;
@@ -71,7 +81,8 @@ tbody {
     border-radius: 5px;
 }
 
-.Health {
+.health {
+    border-bottom: 3px solid #fff;
     font-size: 20px;
 }
 
@@ -81,7 +92,7 @@ tbody {
 
 table {
     font-size: 0.7em;
-    border: 3px solid;
+    border: 3px solid #fff;
     margin: auto;
 }
 
@@ -115,13 +126,17 @@ button:hover {
 }
 
 footer {
+    background-color: #000 !important;
+    color: #fff;
+    border-top: solid 1px #fff;
     height: 20px;
     align-items: flex-end;
     justify-content: center;
     text-align: center;
 
     a {
-        color: #000;
+        background-color: #000;
+        color: #fff;
     }
 }
 
@@ -140,60 +155,6 @@ footer {
     min-height: 100vh;
     text-align: center;
 
-}
-
-@media (prefers-color-scheme: dark) {
-
-    body,
-    .gamebox,
-    .container,
-    footer a {
-        background-color: #000;
-        color: #fff;
-    }
-
-    footer {
-        background-color: #000;
-        color: #fff;
-        border-top: solid 1px #fff;
-    }
-
-    table {
-        font-size: 0.7em;
-        border: 3px solid #fff;
-        margin: auto;
-    }
-
-    .Health {
-        border-bottom: 3px solid #fff;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-
-    body,
-    .gamebox,
-    .container,
-    footer a {
-        background-color: #fff;
-        color: #000;
-    }
-
-    footer {
-        background-color: #fff;
-        color: #000;
-        border-top: solid 1px #000;
-    }
-
-    table {
-        font-size: 0.7em;
-        border: 3px solid #000;
-        margin: auto;
-    }
-
-    .Health {
-        border-bottom: 3px solid #000;
-    }
 }
 
 .hidden {
