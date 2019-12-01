@@ -17,10 +17,6 @@ body {
   text-align: center;
 }
 
-h1 {
-  font-size: 3em;
-}
-
 h3 {
   text-decoration: underline;
   margin-top: 2em;
@@ -44,6 +40,7 @@ p {
 .title {
   font-weight: bold;
   padding-bottom: 20px;
+  font-size: 3rem;
 }
 
 .fa {
@@ -215,11 +212,29 @@ footer a {
   img {
     max-width: 60%;
   }
+  .title {
+    font-size: 2.1em;
+  }
+  h3 {
+    margin-top: 1.1em;
+  }
+  p {
+    font-size: 15px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   img {
     max-width: 70%;
+  }
+  .title {
+    font-size: 2.3em;
+  }
+  h3 {
+    margin-top: 1.3em;
+  }
+  p {
+    font-size: 16px;
   }
 }
 
@@ -227,11 +242,29 @@ footer a {
   img {
     max-width: 80%;
   }
+  .title {
+    font-size: 2.5em;
+  }
+  h3 {
+    margin-top: 1.5em;
+  }
+  p {
+    font-size: 17px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   img {
     max-width: 90%;
+  }
+  .title {
+    font-size: 2.7em;
+  }
+  h3 {
+    margin-top: 1.7em;
+  }
+  p {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=main.css.map */
