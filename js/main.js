@@ -276,3 +276,17 @@ function compMaxHealth() {
 }
 
 compMaxHealth()
+
+/* Chance function */
+
+function chance() {
+    console.log('Triggered!');
+}
+if (Math.random() <= 0.4) {
+    chance();
+} else{
+    console.log('Failed!');
+}
+
+/* Stun function */
+

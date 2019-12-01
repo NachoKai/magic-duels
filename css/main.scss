@@ -27,7 +27,7 @@ p {
 
 .container {
     min-width: 98vw;
-    min-height: 98vh;
+    min-height: calc(100vh - 25px);
 }
 
 .gamebox {
@@ -118,6 +118,7 @@ button:hover {
 }
 
 footer {
+    height: 20px;
     align-items: flex-end;
     justify-content: center;
     text-align: center;
