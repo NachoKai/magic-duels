@@ -128,7 +128,7 @@ function gameVictory() {
 
     if (compHealth <= 0) {
         document.querySelector("#gamebox").className = "gameVictory"
-        document.getElementById('winner').innerText = "Congratulations, you won the game! 👍";
+        document.getElementById('winner').innerText = "Congratulations, you won the duel! 👍";
         document.getElementById('defensive').onclick = '';
         document.getElementById('sneaky').onclick = '';
         document.getElementById('aggressive').onclick = '';
@@ -140,7 +140,7 @@ function gameOver() {
 
     if (playerHealth <= 0) {
         document.querySelector("#gamebox").className = "gameOver"
-        document.getElementById('winner').innerText = "You lost the game! 👎";
+        document.getElementById('winner').innerText = "You lost the duel! 👎";
         document.getElementById('defensive').onclick = '';
         document.getElementById('sneaky').onclick = '';
         document.getElementById('aggressive').onclick = '';
