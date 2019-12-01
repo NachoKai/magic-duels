@@ -1,0 +1,24 @@
+{
+  "name": "magic-duels",
+  "version": "1.0.0",
+  "description": "•HTML  \r •CSS (Scss, Grid, Flexbox, Responsive Design)  \r •Javascript  \r •Google Fonts",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^3.7.0",
+    "start-server-and-test": "^1.10.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NachoKai/magic-duels.git"
+  },
+  "author": "Nacho Caiafa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NachoKai/magic-duels/issues"
+  },
+  "homepage": "https://github.com/NachoKai/magic-duels#readme"
+}
