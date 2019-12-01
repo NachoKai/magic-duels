@@ -16,16 +16,3 @@ Defensive   > Aggressive
 * Spells can have a couple different effects: direct damage or healing, a chance for damage or healing over time, or a chance for a stun.  
 * A stunned character will still be able to choose a stance each turn they’re stunned. If a stuned character wins the turn simply ends, if the stunned character loses then the turn proceeds as normal with the opposing character choosing a spell.  
 * When both characters choose the same stance the round will tie and both can be healed, damaged or nothing depending the action.  
-  
-* Table  
-```
-______________________________________________________________
-			                USER	
-		    DEF	            SNE             AGG
-        DEF	+1    tie  +1	-2 user win 0	+1 comp win -1
-        
-COMP	SNE	0 comp win -2	-1   tie   -1	 -2 user win 0
-
-	AGG    -1 user win +1	0 comp win -2  	 0   tie     0
-______________________________________________________________
-```
