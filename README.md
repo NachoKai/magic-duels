@@ -1,6 +1,6 @@
-# Rock - Paper - Scissors  
-  
-## [Live Demo](https://nachokai.github.io/rock-paper-scissors/)  
+# Magic Duels
+//under construction
+## [Live Demo](https://nachokai.github.io/magic-duels/)  
 •HTML  
 •CSS (Scss, Grid, Flexbox, Responsive Design)  
 •Javascript  
