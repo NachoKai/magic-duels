@@ -144,61 +144,73 @@ function gameOver() {
 /* Spells */
 
 function expelliarmus() {
+    /* -10dmg / chance stun 1 turn*/
     let $expelliarmus = document.getElementById('expelliarmus').innerText
     c('expelliarmus')
 }
 
 function incendio() {
+    /* -5dmg / chance -10dmg 2 turns*/
     let incendio = document.getElementById('incendio')
     c('incendio')
 }
 
 function depulso() {
+    /* -17dmg*/
     let depulso = document.getElementById('depulso')
     c('depulso')
 }
 
 function confringo() {
+    /* -5dmg / chance stun 2 turns*/
     let confringo = document.getElementById('confringo')
     c('confringo')
 }
 
 function rictusempra() {
+    /* -10dmg / chance stun 1 turn*/
     let rictusempra = document.getElementById('rictusempra')
     c('rictusempra')
 }
 
 function flipendo() {
+    /* -15dmg */
     let flipendo = document.getElementById('flipendo')
     c('flipendo')
 }
 
 function immobulus() {
+    /* -5dmg / chance stun 2 turns*/
     let immobulus = document.getElementById('immobulus')
     c('immobulus')
 }
 
 function diffindo() {
+    /* -6dmg / chance -3dmg 8 turns*/
     let diffindo = document.getElementById('diffindo')
     c('diffindo')
 }
 
 function wiggenweld() {
+    /* +5heal & +6heal 2 turns */
     let wiggenweld = document.getElementById('wiggenweld')
     c('wiggenweld')
 }
 
 function episkey() {
+    /* +10heal / chance +5heal 2 turns*/
     let episkey = document.getElementById('episkey')
     c('episkey')
 }
 
 function petrificus() {
+    /* -5dmg / chance stun 2 turns*/
     let petrificus = document.getElementById('petrificus')
     c('petrificus')
 }
 
 function bombarda() {
+    /* -10dmg / chance stun 1 turn & -10dmg 1 turn*/
     let bombarda = document.getElementById('bombarda')
     c('bombarda')
 }
