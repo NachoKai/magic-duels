@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Magic Duels</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/429b57eee3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="gamebox" id="gamebox">
+            <h1 class="title"><img src="img/wand1.png" width="100"> Magic Duels <img src="img/wand2.png" width="100">
+            </h1>
+
+            <h3>Make your choice:</h3>
+            <div class="usercontainer">
+                <i id="rock" class="fa"><img src="img/defensive.png" alt="Defensive"><br> Defensive</i>
+                <i id="paper" class="fa"><img src="img/sneaky.png" alt="Sneaky"><br> Sneaky</i>
+                <i id="scissors" class="fa"><img src="img/aggressive.png" alt="Aggressive"><br> Aggressive</i>
+            </div>
+
+            <div class="spells">Spells:
+
+                <div class="aggressive">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Spell</td>
+                                <td>Effect</td>
+                                <td>Chance</td>
+                                <td>Magic</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Expelliarmus</td>
+                                <td>10 Dmg</td>
+                                <td>Stun 1 turn</td>
+                                <td>X MP</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Incendio</td>
+                                <td>5 Dmg</td>
+                                <td>10 Dmg 2 turns</td>
+                                <td>X MP</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Depulso</td>
+                                <td>17 Dmg</td>
+                                <td>-</td>
+                                <td>X MP</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Confringo</td>
+                                <td>5 Dmg</td>
+                                <td>Stun 2 turns</td>
+                                <td>X MP</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="sneaky">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Spell</td>
+                                <td>Effect</td>
+                                <td>Chance</td>
+                                <td>Magic</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Rictusempra</td>
+                                <td>10 Dmg</td>
+                                <td>Stun 1 turn</td>
+                                <td>X MP</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Flipendo</td>
+                                <td>15 Dmg </td>
+                                <td>-</td>
+                                <td>X MP</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Immobulus</td>
+                                <td>5 Dmg</td>
+                                <td>Stun 2 turn</td>
+                                <td>X MP</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Diffindo</td>
+                                <td>6 Dmg</td>
+                                <td>-3 Dmg 8 turns</td>
+                                <td>X MP</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="defensive">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Spell</td>
+                                <td>Effect</td>
+                                <td>Chance</td>
+                                <td>Magic</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Wiggenweld Potion</td>
+                                <td>3 Heal/ 6 Heal 2 turns</td>
+                                <td>-</td>
+                                <td>X MP</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Episkey</td>
+                                <td>10 Heal</td>
+                                <td>5 Heal 2 turns</td>
+                                <td>X MP</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Pertificus Totalus</td>
+                                <td>5 Dmg</td>
+                                <td>Stun 2 turns</td>
+                                <td>X MP</td>
+                            </tr>
+                            <tr>
+                                <td>👉</td>
+                                <td>Bombarda</td>
+                                <td>10 Dmg</td>
+                                <td>Stun 1 turn /-10 Dmg 1 turn</td>
+                                <td>X MP</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="computeranswer">
+                <p id="result"></p>
+                <p id="winner"></p>
+            </div>
+
+            <div id="HealthBoard">
+                <table>
+                    <tr>
+                        <th colspan="2" class="Health">Health / Magic</th>
+                    </tr>
+                    <tr>
+                        <td class="Health">Player</td>
+                        <td class="Health">Computer</td>
+                    </tr>
+                    <tr>
+                        <td id="playerHealth">100 HP / 100 MP</td>
+                        <td id="compHealth">100 HP / 100 MP</td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <a href="https://github.com/NachoKai">Nacho Caiafa</a> &copy;
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
