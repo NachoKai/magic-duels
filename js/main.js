@@ -39,33 +39,33 @@ function play(userPlay) {
 
     if (userPlay == 'Defensive') {
         if (compChoice == 'Defensive') {
-            document.getElementById('winner').innerHTML = "It's a tie! 😮";
+            document.getElementById('winner').innerHTML = "🟡 It's a tie! 😮 🟡";
         } else if (compChoice == 'Sneaky') {
-            document.getElementById('winner').innerHTML = "Computer wins! 😞";
+            document.getElementById('winner').innerHTML = "🟡 Computer wins! 😞 🟦";
             compHealth--;
         } else if (compChoice == 'Aggressive') {
-            document.getElementById('winner').innerHTML = "You win! 😀";
+            document.getElementById('winner').innerHTML = "🟡 You win! 😀 🔺";
             playerHealth--;
         }
 
     } else if (userPlay == 'Sneaky') {
         if (compChoice == 'Sneaky') {
-            document.getElementById('winner').innerHTML = "It's a tie! 😮";
+            document.getElementById('winner').innerHTML = "🟦 It's a tie! 😮 🟦";
         } else if (compChoice == 'Defensive') {
-            document.getElementById('winner').innerHTML = "You win! 😀";
+            document.getElementById('winner').innerHTML = "🟦 You win! 😀 🟡";
             playerHealth--;
         } else if (compChoice == 'Aggressive') {
-            document.getElementById('winner').innerHTML = "Computer wins! 😞";
+            document.getElementById('winner').innerHTML = "🟦 Computer wins! 😞 🔺";
             compHealth--;
         }
     } else if (userPlay == 'Aggressive') {
         if (compChoice == 'Aggressive') {
-            document.getElementById('winner').innerHTML = "It's a tie! 😮";
+            document.getElementById('winner').innerHTML = "🔺 It's a tie! 😮 🔺";
         } else if (compChoice == 'Defensive') {
-            document.getElementById('winner').innerHTML = "Computer wins! 😞";
+            document.getElementById('winner').innerHTML = "🔺 Computer wins! 😞 🟡";
             compHealth--;
         } else if (compChoice == 'Sneaky') {
-            document.getElementById('winner').innerHTML = "You win! 😀";
+            document.getElementById('winner').innerHTML = "🔺 You win! 😀 🟦";
             playerHealth--;
         }
     }
