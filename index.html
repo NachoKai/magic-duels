@@ -19,14 +19,14 @@
 
             <h3>Make your choice:</h3>
             <div class="usercontainer">
-                <i id="rock" class="fa"><img src="img/defensive.png" alt="Defensive"><br> Defensive</i>
-                <i id="paper" class="fa"><img src="img/sneaky.png" alt="Sneaky"><br> Sneaky</i>
-                <i id="scissors" class="fa"><img src="img/aggressive.png" alt="Aggressive"><br> Aggressive</i>
+                <i id="defensive" class="fa"><img src="img/defensive.png" alt="Defensive"><br> Defensive</i>
+                <i id="sneaky" class="fa"><img src="img/sneaky.png" alt="Sneaky"><br> Sneaky</i>
+                <i id="aggressive" class="fa"><img src="img/aggressive.png" alt="Aggressive"><br> Aggressive</i>
             </div>
 
             <div class="spells">Spells:
 
-                <div class="aggressive">
+                <div id="spells-aggressive" class="aggressive hidden">
                     <table>
                         <tbody>
                             <tr>
@@ -68,7 +68,7 @@
                     </table>
                 </div>
 
-                <div class="sneaky">
+                <div id="spells-sneaky" class="sneaky hidden">
                     <table>
                         <tbody>
                             <tr>
@@ -110,7 +110,7 @@
                     </table>
                 </div>
 
-                <div class="defensive">
+                <div id="spells-defensive" class="defensive hidden">
                     <table>
                         <tbody>
                             <tr>
@@ -158,7 +158,7 @@
                 <p id="winner"></p>
             </div>
 
-            <div id="HealthBoard">
+            <div id="health-board">
                 <table>
                     <tr>
                         <th colspan="2" class="Health">Health / Magic</th>

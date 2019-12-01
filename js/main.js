@@ -1,20 +1,29 @@
 let playerHealth = 100;
 let compHealth = 100;
 
-document.getElementById('rock').onclick = playRock;
-document.getElementById('paper').onclick = playPaper;
-document.getElementById('scissors').onclick = playScissors;
+document.getElementById('defensive').onclick = playDefensive;
+document.getElementById('sneaky').onclick = playSneaky;
+document.getElementById('aggressive').onclick = playAggressive;
 document.getElementById('reset').onclick = resetGame;
 
-function playRock() {
+function playDefensive() {
+    document.getElementById('spells-defensive').className = "defensive"
+    document.getElementById('spells-sneaky').className = "sneaky hidden"
+    document.getElementById('spells-aggressive').className = "aggressive hidden"
     play('Defensive');
 }
 
-function playPaper() {
+function playSneaky() {
+    document.getElementById('spells-defensive').className = "defensive hidden"
+    document.getElementById('spells-sneaky').className = "sneaky"
+    document.getElementById('spells-aggressive').className = "aggressive hidden"
     play('Sneaky');
 }
 
-function playScissors() {
+function playAggressive() {
+    document.getElementById('spells-defensive').className = "defensive hidden"
+    document.getElementById('spells-sneaky').className = "sneaky hidden"
+    document.getElementById('spells-aggressive').className = "aggressive"
     play('Aggressive');
 }
 
@@ -75,9 +84,9 @@ function resetGame() {
     document.getElementById('winner').innerHTML = ''
     document.getElementById('playerHealth').innerHTML = playerHealth;
     document.getElementById('compHealth').innerHTML = compHealth;
-    document.getElementById('rock').onclick = playRock;
-    document.getElementById('paper').onclick = playPaper;
-    document.getElementById('scissors').onclick = playScissors;
+    document.getElementById('defensive').onclick = playDefensive;
+    document.getElementById('sneaky').onclick = playSneaky;
+    document.getElementById('aggressive').onclick = playAggressive;
 };
 
 function gameVictory() {
@@ -86,9 +95,9 @@ function gameVictory() {
     if (compHealth === 0) {
         document.querySelector("#gamebox").className = "gameVictory"
         document.getElementById('winner').innerText = "Congratulations, you won the game! 👍";
-        document.getElementById('rock').onclick = '';
-        document.getElementById('paper').onclick = '';
-        document.getElementById('scissors').onclick = '';
+        document.getElementById('defensive').onclick = '';
+        document.getElementById('sneaky').onclick = '';
+        document.getElementById('aggressive').onclick = '';
     }
 }
 
@@ -98,9 +107,9 @@ function gameOver() {
     if (playerHealth === 0) {
         document.querySelector("#gamebox").className = "gameOver"
         document.getElementById('winner').innerText = "You lost the game! 👎";
-        document.getElementById('rock').onclick = '';
-        document.getElementById('paper').onclick = '';
-        document.getElementById('scissors').onclick = '';
+        document.getElementById('defensive').onclick = '';
+        document.getElementById('sneaky').onclick = '';
+        document.getElementById('aggressive').onclick = '';
     }
 
 }

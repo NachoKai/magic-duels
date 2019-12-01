@@ -25,7 +25,7 @@ p {
 
 .container {
     min-width: 100vw;
-    min-height: calc(100vh - 25px);
+    min-height: 100vh;
 }
 
 .gamebox {
@@ -46,15 +46,15 @@ p {
     margin: 0.25em;
 }
 
-#rock {
+#defensive {
     cursor: pointer;
 }
 
-#paper {
+#sneaky {
     cursor: pointer;
 }
 
-#scissors {
+#aggressive {
     cursor: pointer;
 }
 
@@ -82,6 +82,7 @@ tbody {
 }
 
 table {
+    font-size: 0.7em;
     border: 3px solid;
     margin: auto;
 }
@@ -129,7 +130,7 @@ footer {
     padding: 20px;
     background-color: green;
     color: white;
-    min-height: calc(100vh - 25px);
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -137,7 +138,7 @@ footer {
     padding: 20px;
     background-color: red;
     color: white;
-    min-height: calc(100vh - 25px);
+    min-height: 100vh;
     text-align: center;
 
 }
@@ -159,9 +160,9 @@ footer {
     }
 
     table {
+        font-size: 0.7em;
         border: 3px solid #fff;
         margin: auto;
-
     }
 
     .Health {
@@ -186,6 +187,7 @@ footer {
     }
 
     table {
+        font-size: 0.7em;
         border: 3px solid #000;
         margin: auto;
     }
@@ -195,6 +197,6 @@ footer {
     }
 }
 
-.hidden{
+.hidden {
     display: none;
 }
