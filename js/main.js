@@ -145,8 +145,8 @@ function gameOver() {
 
 function expelliarmus() {
     /* -10dmg / chance stun 1 turn*/
-    let $expelliarmus = document.getElementById('expelliarmus').innerText
-    c('expelliarmus')
+    compHealth = compHealth - 10
+    document.getElementById('compHealth').innerHTML = compHealth;
 }
 
 function incendio() {
