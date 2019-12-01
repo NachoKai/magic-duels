@@ -55,45 +55,52 @@ function play(userPlay) {
     if (userPlay == 'Defensive') {
         if (compChoice == 'Defensive') {
             document.getElementById('winner').innerHTML = "🟡 It's a tie! 😮 🟡";
+            compHealth++;
+            playerHealth++;
         } else if (compChoice == 'Sneaky') {
             document.getElementById('winner').innerHTML = "🟡 Computer wins! 😞 🟦";
-            compHealth--;
+            playerHealth = playerHealth - 2;
         } else if (compChoice == 'Aggressive') {
             document.getElementById('spells-defensive').className = "defensive"
             document.getElementById('spells-sneaky').className = "sneaky hidden"
             document.getElementById('spells-aggressive').className = "aggressive hidden"
             document.getElementById('winner').innerHTML = "🟡 You win! 😀 🔺";
-            playerHealth--;
+            playerHealth++;
+            compHealth--;
         }
 
     } else if (userPlay == 'Sneaky') {
         if (compChoice == 'Sneaky') {
             document.getElementById('winner').innerHTML = "🟦 It's a tie! 😮 🟦";
+            playerHealth--;
+            compHealth--;
         } else if (compChoice == 'Defensive') {
             document.getElementById('spells-defensive').className = "defensive hidden"
             document.getElementById('spells-sneaky').className = "sneaky"
             document.getElementById('spells-aggressive').className = "aggressive hidden"
             document.getElementById('winner').innerHTML = "🟦 You win! 😀 🟡";
-            playerHealth--;
+            compHealth = compHealth - 2
         } else if (compChoice == 'Aggressive') {
             document.getElementById('winner').innerHTML = "🟦 Computer wins! 😞 🔺";
-            compHealth--;
+            playerHealth = playerHealth - 2;
         }
     } else if (userPlay == 'Aggressive') {
         if (compChoice == 'Aggressive') {
             document.getElementById('winner').innerHTML = "🔺 It's a tie! 😮 🔺";
         } else if (compChoice == 'Defensive') {
             document.getElementById('winner').innerHTML = "🔺 Computer wins! 😞 🟡";
-            compHealth--;
+            playerHealth = playerHealth - 2;
         } else if (compChoice == 'Sneaky') {
             document.getElementById('spells-defensive').className = "defensive hidden"
             document.getElementById('spells-sneaky').className = "sneaky hidden"
             document.getElementById('spells-aggressive').className = "aggressive"
             document.getElementById('winner').innerHTML = "🔺 You win! 😀 🟦";
-            playerHealth--;
+            compHealth = compHealth - 2;
         }
     }
 
+    userMaxHealth()
+    compMaxHealth()
     gameVictory()
     gameOver()
     document.getElementById('playerHealth').innerHTML = playerHealth;
