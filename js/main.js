@@ -146,7 +146,7 @@ function gameOver() {
 function expelliarmus() {
     /* -10dmg / chance stun 1 turn*/
     compHealth = compHealth - 10
-    document.getElementById('winner').innerHTML = "Expelliarmus deals 10 dmg! 💥";
+    document.getElementById('winner').innerHTML = "Expelliarmus deals 10 damage! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
@@ -155,7 +155,7 @@ function incendio() {
     /* -5dmg / chance -10dmg 2 turns*/
     let incendio = document.getElementById('incendio')
     compHealth = compHealth - 5
-    document.getElementById('winner').innerHTML = "Incendio deals 5 dmg! 💥";
+    document.getElementById('winner').innerHTML = "Incendio deals 5 damage! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
@@ -164,7 +164,7 @@ function depulso() {
     /* -17dmg*/
     let depulso = document.getElementById('depulso')
     compHealth = compHealth - 17
-    document.getElementById('winner').innerHTML = "Depulso deals 17 dmg! 💥";
+    document.getElementById('winner').innerHTML = "Depulso deals 17 damage! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
@@ -173,7 +173,7 @@ function confringo() {
     /* -5dmg / chance stun 2 turns*/
     let confringo = document.getElementById('confringo')
     compHealth = compHealth - 5
-    document.getElementById('winner').innerHTML = "Confringo deals 5 dmg! 💥";
+    document.getElementById('winner').innerHTML = "Confringo deals 5 damage! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
@@ -182,6 +182,7 @@ function rictusempra() {
     /* -10dmg / chance stun 1 turn*/
     let rictusempra = document.getElementById('rictusempra')
     compHealth = compHealth - 10
+    document.getElementById('winner').innerHTML = "Rictusempra deals 10 damage! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-sneaky').className = "sneaky hidden"
 }
@@ -190,6 +191,7 @@ function flipendo() {
     /* -15dmg */
     let flipendo = document.getElementById('flipendo')
     compHealth = compHealth - 15
+    document.getElementById('winner').innerHTML = "Flipendo deals 15 damage! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-sneaky').className = "sneaky hidden"
 }
@@ -197,6 +199,7 @@ function flipendo() {
 function immobulus() {
     /* -5dmg / chance stun 2 turns*/
     let immobulus = document.getElementById('immobulus')
+    document.getElementById('winner').innerHTML = "Immmobulus deals 5 damage! 💥";
     compHealth = compHealth - 5
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-sneaky').className = "sneaky hidden"
@@ -206,6 +209,7 @@ function diffindo() {
     /* -6dmg / chance -3dmg 8 turns*/
     let diffindo = document.getElementById('diffindo')
     compHealth = compHealth - 6
+    document.getElementById('winner').innerHTML = "Diffindo deals 6 damage! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-sneaky').className = "sneaky hidden"
 }
@@ -214,6 +218,7 @@ function wiggenweld() {
     /* +5heal & +6heal 2 turns */
     let wiggenweld = document.getElementById('wiggenweld')
     playerHealth = playerHealth + 5
+    document.getElementById('winner').innerHTML = "Wiggenweld Potion increases your health by 5 points! 💚";
     document.getElementById('playerHealth').innerHTML = playerHealth;
     document.getElementById('spells-defensive').className = "defensive hidden"
     userMaxHealth()
@@ -223,6 +228,7 @@ function episkey() {
     /* +10heal / chance +5heal 2 turns*/
     let episkey = document.getElementById('episkey')
     playerHealth = playerHealth + 10
+    document.getElementById('winner').innerHTML = "Wiggenweld Potion increases your health by 10 points! 💚";
     document.getElementById('playerHealth').innerHTML = playerHealth;
     document.getElementById('spells-defensive').className = "defensive hidden"
     userMaxHealth()
@@ -232,6 +238,7 @@ function petrificus() {
     /* -5dmg / chance stun 2 turns*/
     let petrificus = document.getElementById('petrificus')
     compHealth = compHealth - 5
+    document.getElementById('winner').innerHTML = "Petrificus Totalus deals 5 damage! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-defensive').className = "defensive hidden"
 }
@@ -240,6 +247,7 @@ function bombarda() {
     /* -10dmg / chance stun 1 turn & -10dmg 1 turn*/
     let bombarda = document.getElementById('bombarda')
     compHealth = compHealth - 10
+    document.getElementById('winner').innerHTML = "Bombarda deals 5 damage! 💥";
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('spells-defensive').className = "defensive hidden"
 }
