@@ -24,9 +24,9 @@ ______________________________________________________________
 		    DEF	            SNE             AGG
         DEF	+1    tie  +1	-2 user win 0	+1 comp win -1
         
-COMP	SNE	0 comp win -2	-1   tie   -1	-2 user win 0
+COMP	SNE	0 comp win -2	-1   tie   -1	 -2 user win 0
 
-	    AGG	-1 user win +1	0 comp win -2	0   tie     0
+	AGG    -1 user win +1	0 comp win -2  	 0   tie     0
 ______________________________________________________________
 ```
 
