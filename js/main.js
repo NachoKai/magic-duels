@@ -119,7 +119,7 @@ function resetGame() {
 function gameVictory() {
     document.getElementById('playerHealth').value = playerHealth;
 
-    if (compHealth === 0) {
+    if (compHealth <= 0) {
         document.querySelector("#gamebox").className = "gameVictory"
         document.getElementById('winner').innerText = "Congratulations, you won the game! 👍";
         document.getElementById('defensive').onclick = '';
@@ -131,7 +131,7 @@ function gameVictory() {
 function gameOver() {
     document.getElementById('compHealth').value = compHealth;
 
-    if (playerHealth === 0) {
+    if (playerHealth <= 0) {
         document.querySelector("#gamebox").className = "gameOver"
         document.getElementById('winner').innerText = "You lost the game! 👎";
         document.getElementById('defensive').onclick = '';
@@ -147,70 +147,93 @@ function expelliarmus() {
     /* -10dmg / chance stun 1 turn*/
     compHealth = compHealth - 10
     document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
 
 function incendio() {
     /* -5dmg / chance -10dmg 2 turns*/
     let incendio = document.getElementById('incendio')
-    c('incendio')
+    compHealth = compHealth - 5
+    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
 
 function depulso() {
     /* -17dmg*/
     let depulso = document.getElementById('depulso')
-    c('depulso')
+    compHealth = compHealth - 17
+    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
 
 function confringo() {
     /* -5dmg / chance stun 2 turns*/
     let confringo = document.getElementById('confringo')
-    c('confringo')
+    compHealth = compHealth - 5
+    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
 
 function rictusempra() {
     /* -10dmg / chance stun 1 turn*/
     let rictusempra = document.getElementById('rictusempra')
-    c('rictusempra')
+    compHealth = compHealth - 10
+    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('spells-sneaky').className = "sneaky hidden"
 }
 
 function flipendo() {
     /* -15dmg */
     let flipendo = document.getElementById('flipendo')
-    c('flipendo')
+    compHealth = compHealth - 15
+    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('spells-sneaky').className = "sneaky hidden"
 }
 
 function immobulus() {
     /* -5dmg / chance stun 2 turns*/
     let immobulus = document.getElementById('immobulus')
-    c('immobulus')
+    compHealth = compHealth - 5
+    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('spells-sneaky').className = "sneaky hidden"
 }
 
 function diffindo() {
     /* -6dmg / chance -3dmg 8 turns*/
     let diffindo = document.getElementById('diffindo')
-    c('diffindo')
+    compHealth = compHealth - 6
+    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('spells-sneaky').className = "sneaky hidden"
 }
 
 function wiggenweld() {
     /* +5heal & +6heal 2 turns */
     let wiggenweld = document.getElementById('wiggenweld')
-    c('wiggenweld')
+    playerHealth = playerHealth + 5
+    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('spells-sneaky').className = "defensive hidden"
 }
 
 function episkey() {
     /* +10heal / chance +5heal 2 turns*/
     let episkey = document.getElementById('episkey')
-    c('episkey')
+    playerHealth = playerHealth + 10
+    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('spells-sneaky').className = "defensive hidden"
 }
 
 function petrificus() {
     /* -5dmg / chance stun 2 turns*/
     let petrificus = document.getElementById('petrificus')
-    c('petrificus')
+    compHealth = compHealth - 5
+    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('spells-sneaky').className = "defensive hidden"
 }
 
 function bombarda() {
     /* -10dmg / chance stun 1 turn & -10dmg 1 turn*/
     let bombarda = document.getElementById('bombarda')
-    c('bombarda')
+    compHealth = compHealth - 10
+    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('spells-sneaky').className = "defensive hidden"
 }
