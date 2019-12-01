@@ -1,5 +1,20 @@
 let playerHealth = 100;
 let compHealth = 100;
+let playerTurn = false
+const c = console.log
+
+function allowsClick() {
+    if (playerTurn === false) {
+        return playerTurn = true
+    }
+}
+
+function notAllowsClick() {
+    if (playerTurn === true) {
+        return playerTurn = false
+    }
+}
+
 
 document.getElementById('defensive').onclick = playDefensive;
 document.getElementById('sneaky').onclick = playSneaky;
@@ -7,23 +22,23 @@ document.getElementById('aggressive').onclick = playAggressive;
 document.getElementById('reset').onclick = resetGame;
 
 function playDefensive() {
-    document.getElementById('spells-defensive').className = "defensive"
-    document.getElementById('spells-sneaky').className = "sneaky hidden"
     document.getElementById('spells-aggressive').className = "aggressive hidden"
+    document.getElementById('spells-defensive').className = "defensive hidden"
+    document.getElementById('spells-sneaky').className = "sneaky hidden"
     play('Defensive');
 }
 
 function playSneaky() {
-    document.getElementById('spells-defensive').className = "defensive hidden"
-    document.getElementById('spells-sneaky').className = "sneaky"
     document.getElementById('spells-aggressive').className = "aggressive hidden"
+    document.getElementById('spells-defensive').className = "defensive hidden"
+    document.getElementById('spells-sneaky').className = "sneaky hidden"
     play('Sneaky');
 }
 
 function playAggressive() {
+    document.getElementById('spells-aggressive').className = "aggressive hidden"
     document.getElementById('spells-defensive').className = "defensive hidden"
     document.getElementById('spells-sneaky').className = "sneaky hidden"
-    document.getElementById('spells-aggressive').className = "aggressive"
     play('Aggressive');
 }
 
@@ -44,6 +59,9 @@ function play(userPlay) {
             document.getElementById('winner').innerHTML = "🟡 Computer wins! 😞 🟦";
             compHealth--;
         } else if (compChoice == 'Aggressive') {
+            document.getElementById('spells-defensive').className = "defensive"
+            document.getElementById('spells-sneaky').className = "sneaky hidden"
+            document.getElementById('spells-aggressive').className = "aggressive hidden"
             document.getElementById('winner').innerHTML = "🟡 You win! 😀 🔺";
             playerHealth--;
         }
@@ -52,6 +70,9 @@ function play(userPlay) {
         if (compChoice == 'Sneaky') {
             document.getElementById('winner').innerHTML = "🟦 It's a tie! 😮 🟦";
         } else if (compChoice == 'Defensive') {
+            document.getElementById('spells-defensive').className = "defensive hidden"
+            document.getElementById('spells-sneaky').className = "sneaky"
+            document.getElementById('spells-aggressive').className = "aggressive hidden"
             document.getElementById('winner').innerHTML = "🟦 You win! 😀 🟡";
             playerHealth--;
         } else if (compChoice == 'Aggressive') {
@@ -65,6 +86,9 @@ function play(userPlay) {
             document.getElementById('winner').innerHTML = "🔺 Computer wins! 😞 🟡";
             compHealth--;
         } else if (compChoice == 'Sneaky') {
+            document.getElementById('spells-defensive').className = "defensive hidden"
+            document.getElementById('spells-sneaky').className = "sneaky hidden"
+            document.getElementById('spells-aggressive').className = "aggressive"
             document.getElementById('winner').innerHTML = "🔺 You win! 😀 🟦";
             playerHealth--;
         }
@@ -115,4 +139,66 @@ function gameOver() {
         document.getElementById('aggressive').onclick = '';
     }
 
+}
+
+/* Spells */
+
+function expelliarmus() {
+    let $expelliarmus = document.getElementById('expelliarmus').innerText
+    c('expelliarmus')
+}
+
+function incendio() {
+    let incendio = document.getElementById('incendio')
+    c('incendio')
+}
+
+function depulso() {
+    let depulso = document.getElementById('depulso')
+    c('depulso')
+}
+
+function confringo() {
+    let confringo = document.getElementById('confringo')
+    c('confringo')
+}
+
+function rictusempra() {
+    let rictusempra = document.getElementById('rictusempra')
+    c('rictusempra')
+}
+
+function flipendo() {
+    let flipendo = document.getElementById('flipendo')
+    c('flipendo')
+}
+
+function immobulus() {
+    let immobulus = document.getElementById('immobulus')
+    c('immobulus')
+}
+
+function diffindo() {
+    let diffindo = document.getElementById('diffindo')
+    c('diffindo')
+}
+
+function wiggenweld() {
+    let wiggenweld = document.getElementById('wiggenweld')
+    c('wiggenweld')
+}
+
+function episkey() {
+    let episkey = document.getElementById('episkey')
+    c('episkey')
+}
+
+function petrificus() {
+    let petrificus = document.getElementById('petrificus')
+    c('petrificus')
+}
+
+function bombarda() {
+    let bombarda = document.getElementById('bombarda')
+    c('bombarda')
 }

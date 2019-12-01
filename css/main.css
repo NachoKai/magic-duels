@@ -13,6 +13,7 @@
 }
 
 body {
+  background-color: #000 !important;
   text-align: center;
 }
 
@@ -30,15 +31,14 @@ p {
 }
 
 .container {
-  min-width: 100vw;
-  min-height: 100vh;
+  min-width: 98vw;
+  min-height: 98vh;
 }
 
 .gamebox {
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   text-align: center;
-  border-radius: 5px;
 }
 
 .title {
@@ -157,11 +157,11 @@ footer a {
   .gamebox,
   .container,
   footer a {
-    background: #000;
+    background-color: #000;
     color: #fff;
   }
   footer {
-    background: #000;
+    background-color: #000;
     color: #fff;
     border-top: solid 1px #fff;
   }
@@ -180,11 +180,11 @@ footer a {
   .gamebox,
   .container,
   footer a {
-    background: #fff;
+    background-color: #fff;
     color: #000;
   }
   footer {
-    background: #fff;
+    background-color: #fff;
     color: #000;
     border-top: solid 1px #000;
   }
@@ -200,5 +200,13 @@ footer a {
 
 .hidden {
   display: none;
+}
+
+.pick:hover {
+  cursor: pointer;
+}
+
+.pick:active {
+  font-size: 10px;
 }
 /*# sourceMappingURL=main.css.map */

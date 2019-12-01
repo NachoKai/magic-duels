@@ -21,45 +21,49 @@
 
             <h5>Make your choice:</h5>
             <div class="usercontainer">
-                <i id="defensive" class="fa"><img src="img/defensive.png" alt="Defensive" /><br />
+                <i id="defensive" class="fa"><img src="img/defensive.png" alt="Defensive" class="pick" /><br />
                     Defensive</i>
-                <i id="sneaky" class="fa"><img src="img/sneaky.png" alt="Sneaky" /><br />
+                <i id="sneaky" class="fa"><img src="img/sneaky.png" alt="Sneaky" class="pick" /><br />
                     Sneaky</i>
-                <i id="aggressive" class="fa"><img src="img/aggressive.png" alt="Aggressive" /><br />
+                <i id="aggressive" class="fa"><img src="img/aggressive.png" alt="Aggressive" class="pick" /><br />
                     Aggressive</i>
             </div>
 
+            <div class="computeranswer">
+                <p id="result"></p>
+                <p id="winner"></p>
+            </div>
+
             <div class="spells">
-                <br>
                 <div id="spells-aggressive" class="aggressive hidden">
                     <table>
                         <tbody>
                             <tr>
-                                <td></td>
+                                <td>Select</td>
                                 <td><strong>Spell</strong></td>
                                 <td><strong>Effect</strong></td>
                                 <td><strong>Chance</strong></td>
                             </tr>
                             <tr>
-                                <td>🔺</td>
+                                <td id="expelliarmus" class="pick" onclick="expelliarmus()">🔺</td>
                                 <td>Expelliarmus</td>
                                 <td>10 Dmg</td>
                                 <td>Stun 1 turn</td>
                             </tr>
                             <tr>
-                                <td>🔺</td>
+                                <td id="incendio" class="pick" onclick="incendio()">🔺</td>
                                 <td>Incendio</td>
                                 <td>5 Dmg</td>
                                 <td>10 Dmg 2 turns</td>
                             </tr>
                             <tr>
-                                <td>🔺</td>
+                                <td id="depulso" class="pick" onclick="depulso()">🔺</td>
                                 <td>Depulso</td>
                                 <td>17 Dmg</td>
                                 <td>-</td>
                             </tr>
                             <tr>
-                                <td>🔺</td>
+                                <td id="confringo" class="pick" onclick="confringo()">🔺</td>
                                 <td>Confringo</td>
                                 <td>5 Dmg</td>
                                 <td>Stun 2 turns</td>
@@ -72,31 +76,31 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td></td>
+                                <td>Select</td>
                                 <td><strong>Spell</strong></td>
                                 <td><strong>Effect</strong></td>
                                 <td><strong>Chance<strong></td>
                             </tr>
                             <tr>
-                                <td>🟦</td>
+                                <td id="rictusempra" class="pick" onclick="rictusempra()">🟦</td>
                                 <td>Rictusempra</td>
                                 <td>10 Dmg</td>
                                 <td>Stun 1 turn</td>
                             </tr>
                             <tr>
-                                <td>🟦</td>
+                                <td id="flipendo" class="pick" onclick="flipendo()">🟦</td>
                                 <td>Flipendo</td>
                                 <td>15 Dmg</td>
                                 <td>-</td>
                             </tr>
                             <tr>
-                                <td>🟦</td>
+                                <td id="immobulus" class="pick" onclick="immobulus()">🟦</td>
                                 <td>Immobulus</td>
                                 <td>5 Dmg</td>
                                 <td>Stun 2 turn</td>
                             </tr>
                             <tr>
-                                <td>🟦</td>
+                                <td id="diffindo" class="pick" onclick="diffindo()">🟦</td>
                                 <td>Diffindo</td>
                                 <td>6 Dmg</td>
                                 <td>-3 Dmg 8 turns</td>
@@ -109,31 +113,31 @@
                     <table>
                         <tbody>
                             <tr>
-                                <td></td>
+                                <td>Select</td>
                                 <td><strong>Spell<strong></td>
                                 <td><strong>Effect<strong></td>
                                 <td><strong>Chance</strong></td>
                             </tr>
                             <tr>
-                                <td>🟡</td>
+                                <td id="wiggenweld" class="pick" onclick="wiggenweld()">🟡</td>
                                 <td>Wiggenweld Potion</td>
                                 <td>3 Heal/ 6 Heal 2 turns</td>
                                 <td>-</td>
                             </tr>
                             <tr>
-                                <td>🟡</td>
+                                <td id="episkey" class="pick" onclick="episkey()">🟡</td>
                                 <td>Episkey</td>
                                 <td>10 Heal</td>
                                 <td>5 Heal 2 turns</td>
                             </tr>
                             <tr>
-                                <td>🟡</td>
-                                <td>Pertificus Totalus</td>
+                                <td id="petrificus" class="pick" onclick="petrificus()">🟡</td>
+                                <td>Petrificus Totalus</td>
                                 <td>5 Dmg</td>
                                 <td>Stun 2 turns</td>
                             </tr>
                             <tr>
-                                <td>🟡</td>
+                                <td id="bombarda" class="pick" onclick="bombarda()">🟡</td>
                                 <td>Bombarda</td>
                                 <td>10 Dmg</td>
                                 <td>Stun 1 turn /-10 Dmg 1 turn</td>
@@ -142,12 +146,7 @@
                     </table>
                 </div>
             </div>
-
-            <div class="computeranswer">
-                <p id="result"></p>
-                <p id="winner"></p>
-            </div>
-
+            <br>
             <div id="health-board">
                 <table>
                     <tr>
@@ -158,8 +157,8 @@
                         <td class="Health">Computer</td>
                     </tr>
                     <tr>
-                        <td id="playerHealth">100</td>
-                        <td id="compHealth">100</td>
+                        <td id="playerHealth"></td>
+                        <td id="compHealth"></td>
                     </tr>
                 </table>
             </div>
