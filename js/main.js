@@ -59,6 +59,7 @@ function getCompChoiceSpell() {
 }
 
 function play(userPlay) {
+
     let compChoice = getCompChoice();
     let compChoiceSpell = getCompChoiceSpell()
     document.getElementById('result').innerHTML = `You🧠: ${userPlay} ⚡ Computer💻: ${compChoice}`
@@ -143,8 +144,6 @@ function play(userPlay) {
         }
     }
 
-    gameOver()
-    gameVictory()
     userMaxHealth()
     compMaxHealth()
     document.getElementById('playerHealth').innerHTML = playerHealth;
@@ -168,11 +167,11 @@ function resetGame() {
 };
 
 function gameVictory() {
-    document.getElementById('playerHealth').value = playerHealth;
+    document.getElementById('compHealth').value = compHealth;
 
     if (compHealth <= 0) {
-        document.querySelector("#gamebox").className = "gameVictory"
         document.getElementById('winner').innerText = "Congratulations, you won the duel! 👍";
+        document.getElementById("gamebox").className = "gameVictory"
         document.getElementById('defensive').onclick = function () {};
         document.getElementById('sneaky').onclick = function () {};
         document.getElementById('aggressive').onclick = function () {};
@@ -180,11 +179,11 @@ function gameVictory() {
 }
 
 function gameOver() {
-    document.getElementById('compHealth').value = compHealth;
+    document.getElementById('playerHealth').value = playerHealth;
 
     if (playerHealth <= 0) {
-        document.querySelector("#gamebox").className = "gameOver"
         document.getElementById('winner').innerText = "You lost the duel! 👎";
+        document.getElementById("gamebox").className = "gameOver"
         document.getElementById('defensive').onclick = function () {};
         document.getElementById('sneaky').onclick = function () {};
         document.getElementById('aggressive').onclick = function () {};
@@ -466,6 +465,10 @@ function backgroundRed() {
     setTimeout(function () {
         document.querySelector("#gamebox").className = "gamebox";
     }, 200);
+    setTimeout(function () {
+        gameOver()
+        gameVictory()
+    }, 500);
 }
 
 function backgroundBlue() {
@@ -475,6 +478,10 @@ function backgroundBlue() {
     setTimeout(function () {
         document.querySelector("#gamebox").className = "gamebox";
     }, 200);
+    setTimeout(function () {
+        gameOver()
+        gameVictory()
+    }, 500);
 }
 
 function backgroundYellow() {
@@ -484,4 +491,8 @@ function backgroundYellow() {
     setTimeout(function () {
         document.querySelector("#gamebox").className = "gamebox";
     }, 200);
+    setTimeout(function () {
+        gameOver()
+        gameVictory()
+    }, 500);
 }
