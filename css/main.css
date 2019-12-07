@@ -43,11 +43,26 @@ p {
 }
 
 .gamebox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #000 !important;
   color: #fff;
   padding-bottom: 10px;
   padding-top: 10px;
   text-align: center;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title {
@@ -75,10 +90,12 @@ p {
 }
 
 #reset {
-  padding: 5px;
+  padding: 10px;
   font-weight: bold;
-  border-radius: 5px;
   outline: 0;
+  margin: 0 auto;
+  max-width: 100px;
+  text-align: center;
 }
 
 #winner {
@@ -95,7 +112,10 @@ tbody {
 }
 
 .computeranswer {
-  margin: 2em;
+  padding: 10px;
+  margin: 1em auto;
+  border: 2px solid #fff;
+  text-align: center;
 }
 
 table {
@@ -302,6 +322,18 @@ footer a {
   padding-bottom: 10px;
   padding-top: 10px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .backgBlue {
@@ -310,6 +342,18 @@ footer a {
   padding-bottom: 10px;
   padding-top: 10px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .backgRed {
@@ -318,5 +362,17 @@ footer a {
   padding-bottom: 10px;
   padding-top: 10px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=main.css.map */
