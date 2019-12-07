@@ -4,6 +4,7 @@
   "description": "•HTML  \r •CSS (Scss, Grid, Flexbox, Responsive Design)  \r •Javascript  \r •Google Fonts",
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "cypress": "^3.7.0",
     "start-server-and-test": "^1.10.6"
   },
