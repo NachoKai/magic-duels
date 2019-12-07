@@ -156,6 +156,7 @@ function resetGame() {
     document.querySelector("#gamebox").className = "gamebox"
     document.getElementById('result').innerHTML = ''
     document.getElementById('winner').innerHTML = ''
+    document.getElementById('spell').innerHTML = ''
     document.getElementById('playerHealth').innerHTML = playerHealth;
     document.getElementById('compHealth').innerHTML = compHealth;
     document.getElementById('defensive').onclick = playDefensive;
@@ -496,8 +497,3 @@ function backgroundYellow() {
         gameVictory()
     }, 500);
 }
-
-/* No dragg*/
-Array.prototype.map.call(document.images, function (img) {
-    return document.images.setAttribute('draggable', false);
-});
