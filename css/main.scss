@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap');
+
 * {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Advent Pro', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -101,7 +103,7 @@ th {
     border-bottom: 2px solid black;
 }
 
-td {
+td,h5 {
     font-size: 1.5em;
 }
 
@@ -114,7 +116,6 @@ button {
     border: 2px solid #000;
     background: #fff;
     font-size: 1.5em;
-    font-family: Monospace;
     margin: 1em;
     cursor: pointer;
 }

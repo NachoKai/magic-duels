@@ -62,7 +62,7 @@ function play(userPlay) {
 
     let compChoice = getCompChoice();
     let compChoiceSpell = getCompChoiceSpell()
-    document.getElementById('result').innerHTML = `You🧠: ${userPlay} ⚡ Computer💻: ${compChoice}`
+    document.getElementById('result').innerHTML = `You: ${userPlay} ⚡ Computer: ${compChoice}`
 
     if (userPlay === 'Defensive') {
         if (compChoice === 'Defensive') {
