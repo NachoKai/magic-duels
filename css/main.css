@@ -236,4 +236,28 @@ footer a {
     font-size: 18px;
   }
 }
+
+.backgYellow {
+  background: yellow !important;
+  color: #fff;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.backgBlue {
+  background: blue !important;
+  color: #fff;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.backgRed {
+  background: red !important;
+  color: #fff;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */
