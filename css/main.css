@@ -8,10 +8,11 @@
           box-sizing: border-box;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -ms-user-select: none;
 }
 
 html {
@@ -108,7 +109,8 @@ th {
   border-bottom: 2px solid black;
 }
 
-td, h5 {
+td,
+h5 {
   font-size: 1.5em;
 }
 

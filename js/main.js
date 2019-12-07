@@ -496,3 +496,8 @@ function backgroundYellow() {
         gameVictory()
     }, 500);
 }
+
+/* No dragg*/
+Array.prototype.map.call(document.images, function (img) {
+    return document.images.setAttribute('draggable', false);
+});
