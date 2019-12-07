@@ -2,32 +2,43 @@
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
+
 html {
   background-color: #000 !important;
   color: #fff;
 }
+
 body {
   background-color: #000 !important;
   color: #fff;
   text-align: center;
 }
+
 u {
   text-decoration: underline;
   margin-top: 2em;
 }
+
 p {
   font-size: 20px;
 }
+
 .container {
   background-color: #000 !important;
   color: #fff;
   min-width: 98vw;
   min-height: calc(100vh - 25px);
 }
+
 .gamebox {
   background-color: #000 !important;
   color: #fff;
@@ -35,60 +46,75 @@ p {
   padding-top: 10px;
   text-align: center;
 }
+
 .title {
   font-weight: bold;
   padding-bottom: 20px;
   font-size: 3rem;
 }
+
 .fa {
   font-size: 1.5em;
   cursor: pointer;
   margin: 0.25em;
 }
+
 #defensive {
   cursor: pointer;
 }
+
 #sneaky {
   cursor: pointer;
 }
+
 #aggressive {
   cursor: pointer;
 }
+
 #reset {
   padding: 5px;
   font-weight: bold;
   border-radius: 5px;
   outline: 0;
 }
+
 #winner {
   font-weight: bold;
 }
+
 tbody {
   border-radius: 5px;
 }
+
 .health {
   border-bottom: 3px solid #fff;
   font-size: 20px;
 }
+
 .computeranswer {
   margin: 2em;
 }
+
 table {
   font-size: 0.7em;
   border: 3px solid #fff;
   margin: auto;
 }
+
 th {
   font-size: 2em;
   border-bottom: 2px solid black;
 }
+
 td {
   font-size: 1.5em;
 }
+
 td,
 td {
-  padding: 0.5em;
+  padding: .50em;
 }
+
 button {
   border: 2px solid #000;
   background: #fff;
@@ -97,24 +123,32 @@ button {
   margin: 1em;
   cursor: pointer;
 }
+
 button:hover {
   background: #000;
   color: #fff;
   border: 2px solid #000;
 }
+
 footer {
   background-color: #000 !important;
   color: #fff;
   border-top: solid 1px #fff;
   height: 20px;
-  align-items: flex-end;
-  justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
+
 footer a {
   background-color: #000;
   color: #fff;
 }
+
 .gameVictory {
   padding: 20px;
   background-color: green;
@@ -122,6 +156,7 @@ footer a {
   min-height: 100vh;
   text-align: center;
 }
+
 .gameOver {
   padding: 20px;
   background-color: red;
@@ -129,27 +164,33 @@ footer a {
   min-height: 100vh;
   text-align: center;
 }
+
 .hidden {
   display: none;
 }
+
 .pick:hover {
   cursor: pointer;
 }
+
 .pick:active {
   font-size: 10px;
 }
+
 .pickimg:hover {
   cursor: pointer;
 }
+
 .pickimg:active {
   width: 96%;
 }
+
 @media screen and (min-width: 0px) and (max-width: 320px) {
   img {
     max-width: 50%;
   }
   .wand {
-    max-width: 30%;
+    max-width: 20%;
   }
   .title {
     font-size: 2.2em;
@@ -164,12 +205,13 @@ footer a {
     font-size: 12px;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
   img {
     max-width: 60%;
   }
   .wand {
-    max-width: 40%;
+    max-width: 30%;
   }
   .title {
     font-size: 2.3em;
@@ -184,12 +226,13 @@ footer a {
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
   img {
     max-width: 70%;
   }
   .wand {
-    max-width: 50%;
+    max-width: 40%;
   }
   .title {
     font-size: 2.5em;
@@ -204,6 +247,7 @@ footer a {
     font-size: 16px;
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   img {
     max-width: 80%;
@@ -224,28 +268,10 @@ footer a {
     font-size: 18px;
   }
 }
+
 .backgYellow {
   background: yellow !important;
   color: #fff;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  text-align: center;
-}
-.backgBlue {
-  background: blue !important;
-  color: #fff;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  text-align: center;
-}
-.backgRed {
-  background: red !important;
-  color: #fff;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  text-align: center;
-}
-color: #fff;
   padding-bottom: 10px;
   padding-top: 10px;
   text-align: center;
