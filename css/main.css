@@ -2,43 +2,32 @@
   font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: all 0.2s ease;
+  box-sizing: border-box;
   transition: all 0.2s ease;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
-
 html {
   background-color: #000 !important;
   color: #fff;
 }
-
 body {
   background-color: #000 !important;
   color: #fff;
   text-align: center;
 }
-
 h3 {
   text-decoration: underline;
   margin-top: 2em;
 }
-
 p {
   font-size: 20px;
 }
-
 .container {
   background-color: #000 !important;
   color: #fff;
   min-width: 98vw;
   min-height: calc(100vh - 25px);
 }
-
 .gamebox {
   background-color: #000 !important;
   color: #fff;
@@ -46,75 +35,60 @@ p {
   padding-top: 10px;
   text-align: center;
 }
-
 .title {
   font-weight: bold;
   padding-bottom: 20px;
   font-size: 3rem;
 }
-
 .fa {
   font-size: 1.5em;
   cursor: pointer;
   margin: 0.25em;
 }
-
 #defensive {
   cursor: pointer;
 }
-
 #sneaky {
   cursor: pointer;
 }
-
 #aggressive {
   cursor: pointer;
 }
-
 #reset {
   padding: 5px;
   font-weight: bold;
   border-radius: 5px;
   outline: 0;
 }
-
 #winner {
   font-weight: bold;
 }
-
 tbody {
   border-radius: 5px;
 }
-
 .health {
   border-bottom: 3px solid #fff;
   font-size: 20px;
 }
-
 .computeranswer {
   margin: 2em;
 }
-
 table {
   font-size: 0.7em;
   border: 3px solid #fff;
   margin: auto;
 }
-
 th {
   font-size: 2em;
   border-bottom: 2px solid black;
 }
-
 td {
   font-size: 1.5em;
 }
-
 td,
 td {
-  padding: .50em;
+  padding: 0.5em;
 }
-
 button {
   border: 2px solid #000;
   background: #fff;
@@ -123,32 +97,24 @@ button {
   margin: 1em;
   cursor: pointer;
 }
-
 button:hover {
   background: #000;
   color: #fff;
   border: 2px solid #000;
 }
-
 footer {
   background-color: #000 !important;
   color: #fff;
   border-top: solid 1px #fff;
   height: 20px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: flex-end;
+  justify-content: center;
   text-align: center;
 }
-
 footer a {
   background-color: #000;
   color: #fff;
 }
-
 .gameVictory {
   padding: 20px;
   background-color: green;
@@ -156,7 +122,6 @@ footer a {
   min-height: 100vh;
   text-align: center;
 }
-
 .gameOver {
   padding: 20px;
   background-color: red;
@@ -164,19 +129,15 @@ footer a {
   min-height: 100vh;
   text-align: center;
 }
-
 .hidden {
   display: none;
 }
-
 .pick:hover {
   cursor: pointer;
 }
-
 .pick:active {
   font-size: 10px;
 }
-
 @media screen and (min-width: 0px) and (max-width: 320px) {
   img {
     max-width: 60%;
@@ -191,7 +152,6 @@ footer a {
     font-size: 15px;
   }
 }
-
 @media screen and (min-width: 320px) and (max-width: 480px) {
   img {
     max-width: 70%;
@@ -206,7 +166,6 @@ footer a {
     font-size: 16px;
   }
 }
-
 @media screen and (min-width: 480px) and (max-width: 768px) {
   img {
     max-width: 80%;
@@ -221,7 +180,6 @@ footer a {
     font-size: 17px;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   img {
     max-width: 90%;
@@ -236,4 +194,3 @@ footer a {
     font-size: 18px;
   }
 }
-/*# sourceMappingURL=main.css.map */
