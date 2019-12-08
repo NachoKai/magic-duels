@@ -87,7 +87,8 @@ function play(userPlay) {
             document.getElementById('spells-defensive').className = "defensive"
             document.getElementById('spells-sneaky').className = "sneaky hidden"
             document.getElementById('spells-aggressive').className = "aggressive hidden"
-            document.getElementById('winner').innerHTML = "🟡 You win! 😀 🔺";
+            document.getElementById('spell').innerHTML = ''
+            document.getElementById('winner').innerHTML = "🟡 You win! 😀 🔺 <br> Select a spell:";
             playerHealth++;
             compHealth--;
         }
@@ -103,7 +104,8 @@ function play(userPlay) {
             document.getElementById('spells-defensive').className = "defensive hidden"
             document.getElementById('spells-sneaky').className = "sneaky"
             document.getElementById('spells-aggressive').className = "aggressive hidden"
-            document.getElementById('winner').innerHTML = "🟦 You win! 😀 🟡";
+            document.getElementById('spell').innerHTML = ''
+            document.getElementById('winner').innerHTML = "🟦 You win! 😀 🟡 <br> Select a spell:";
             compHealth = compHealth - 2
         } else if (compChoice === 'Aggressive') {
             document.getElementById('winner').innerHTML = "🟦 Computer wins! 😞 🔺";
@@ -139,7 +141,8 @@ function play(userPlay) {
             document.getElementById('spells-defensive').className = "defensive hidden"
             document.getElementById('spells-sneaky').className = "sneaky hidden"
             document.getElementById('spells-aggressive').className = "aggressive"
-            document.getElementById('winner').innerHTML = "🔺 You win! 😀 🟦";
+            document.getElementById('spell').innerHTML = ''
+            document.getElementById('winner').innerHTML = "🔺 You win! 😀 🟦 <br> Select a spell:";
             compHealth = compHealth - 2;
         }
     }
