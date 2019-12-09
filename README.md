@@ -5,6 +5,7 @@
 •CSS (Scss, Grid, Flexbox, Responsive Design)  
 •Javascript  
 •Google Fonts  
+•SweetAlert2  
 
 //Under Construction
 

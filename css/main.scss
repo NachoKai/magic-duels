@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
@@ -173,7 +173,6 @@ footer {
     color: white;
     min-height: 100vh;
     text-align: center;
-
 }
 
 .hidden {
@@ -185,19 +184,8 @@ footer {
 }
 
 .pick:active {
-    font-size: 10px;
-}
-
-.pickimg:hover {
-    cursor: pointer;
-}
-
-.pickimg:active {
     width: 96%;
-    ;
 }
-
-
 
 @media screen and (min-width: 0px) and (max-width: 320px) {
     img {

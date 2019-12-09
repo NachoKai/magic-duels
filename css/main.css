@@ -6,8 +6,8 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -197,14 +197,6 @@ footer a {
 }
 
 .pick:active {
-  font-size: 10px;
-}
-
-.pickimg:hover {
-  cursor: pointer;
-}
-
-.pickimg:active {
   width: 96%;
 }
 
