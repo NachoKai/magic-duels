@@ -44,6 +44,11 @@
             </div>
 
             <div class="computeranswer">
+                <p id="instructions">Instructions:<br>
+                    🔺 Aggressive surpasses Sneaky 🟦<br>
+                    🟦 Sneaky dodge Defensive 🟡<br>
+                    🟡 Defensive protect Aggressive 🔺<br>
+                </p>
                 <p id="result"></p>
                 <p id="winner"></p>
                 <p id="spell"></p>
@@ -162,18 +167,18 @@
                 </div>
             </div>
             <br>
-            <div id="health-board">
-                <table class="health-board">
+            <div id="stamina-board">
+                <table class="stamina-board">
                     <tr>
-                        <th colspan="2" class="health">Health</th>
+                        <th colspan="2" class="stamina">Stamina</th>
                     </tr>
                     <tr>
-                        <td class="health">Player</td>
-                        <td class="health">Computer</td>
+                        <td class="stamina">Player</td>
+                        <td class="stamina">Computer</td>
                     </tr>
                     <tr>
-                        <td id="playerHealth">100</td>
-                        <td id="compHealth">100</td>
+                        <td id="playerstamina">100</td>
+                        <td id="compstamina">100</td>
                     </tr>
                 </table>
             </div>
@@ -192,6 +197,7 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </body>
 
 </html>

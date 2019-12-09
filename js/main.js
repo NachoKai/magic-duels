@@ -3,8 +3,8 @@ ToDo : Funcion Stun que, si la chance se cumple, bloquee la accion del usuario o
 */
 
 
-let playerHealth = 100;
-let compHealth = 100;
+let playerstamina = 100;
+let compstamina = 100;
 let playerTurn = false
 const c = console.log
 
@@ -26,6 +26,7 @@ document.getElementById('aggressive').onclick = playAggressive;
 document.getElementById('reset').onclick = resetGame;
 
 function playDefensive() {
+    document.getElementById('instructions').innerHTML = ''
     document.getElementById('spells-aggressive').className = "aggressive hidden"
     document.getElementById('spells-defensive').className = "defensive hidden"
     document.getElementById('spells-sneaky').className = "sneaky hidden"
@@ -33,6 +34,7 @@ function playDefensive() {
 }
 
 function playSneaky() {
+    document.getElementById('instructions').innerHTML = ''
     document.getElementById('spells-aggressive').className = "aggressive hidden"
     document.getElementById('spells-defensive').className = "defensive hidden"
     document.getElementById('spells-sneaky').className = "sneaky hidden"
@@ -40,6 +42,7 @@ function playSneaky() {
 }
 
 function playAggressive() {
+    document.getElementById('instructions').innerHTML = ''
     document.getElementById('spells-aggressive').className = "aggressive hidden"
     document.getElementById('spells-defensive').className = "defensive hidden"
     document.getElementById('spells-sneaky').className = "sneaky hidden"
@@ -68,12 +71,12 @@ function play(userPlay) {
         if (compChoice === 'Defensive') {
             document.getElementById('winner').innerHTML = "🟡 It's a tie! 😮 🟡";
             backgroundYellow()
-            compHealth++;
-            playerHealth++;
+            compstamina++;
+            playerstamina++;
             backgroundYellow()
         } else if (compChoice === 'Sneaky') {
             document.getElementById('winner').innerHTML = "🟡 Computer wins! 😞 🟦";
-            playerHealth = playerHealth - 2;
+            playerstamina = playerstamina - 2;
             if (compChoiceSpell === '1') {
                 rictusempraComp()
             } else if (compChoiceSpell === '2') {
@@ -89,16 +92,16 @@ function play(userPlay) {
             document.getElementById('spells-aggressive').className = "aggressive hidden"
             document.getElementById('spell').innerHTML = ''
             document.getElementById('winner').innerHTML = "🟡 You win! 😀 🔺 <br> Select a spell:";
-            playerHealth++;
-            compHealth--;
+            playerstamina++;
+            compstamina--;
         }
 
     } else if (userPlay === 'Sneaky') {
         if (compChoice === 'Sneaky') {
             document.getElementById('winner').innerHTML = "🟦 It's a tie! 😮 🟦";
             backgroundBlue()
-            playerHealth--;
-            compHealth--;
+            playerstamina--;
+            compstamina--;
             backgroundBlue()
         } else if (compChoice === 'Defensive') {
             document.getElementById('spells-defensive').className = "defensive hidden"
@@ -106,10 +109,10 @@ function play(userPlay) {
             document.getElementById('spells-aggressive').className = "aggressive hidden"
             document.getElementById('spell').innerHTML = ''
             document.getElementById('winner').innerHTML = "🟦 You win! 😀 🟡 <br> Select a spell:";
-            compHealth = compHealth - 2
+            compstamina = compstamina - 2
         } else if (compChoice === 'Aggressive') {
             document.getElementById('winner').innerHTML = "🟦 Computer wins! 😞 🔺";
-            playerHealth = playerHealth - 2;
+            playerstamina = playerstamina - 2;
             if (compChoiceSpell === '1') {
                 expelliarmusComp()
             } else if (compChoiceSpell === '2') {
@@ -127,7 +130,7 @@ function play(userPlay) {
             backgroundRed()
         } else if (compChoice === 'Defensive') {
             document.getElementById('winner').innerHTML = "🔺 Computer wins! 😞 🟡";
-            playerHealth = playerHealth - 2;
+            playerstamina = playerstamina - 2;
             if (compChoiceSpell === '1') {
                 wiggenweldComp()
             } else if (compChoiceSpell === '2') {
@@ -143,25 +146,29 @@ function play(userPlay) {
             document.getElementById('spells-aggressive').className = "aggressive"
             document.getElementById('spell').innerHTML = ''
             document.getElementById('winner').innerHTML = "🔺 You win! 😀 🟦 <br> Select a spell:";
-            compHealth = compHealth - 2;
+            compstamina = compstamina - 2;
         }
     }
 
-    userMaxHealth()
-    compMaxHealth()
-    document.getElementById('playerHealth').innerHTML = playerHealth;
-    document.getElementById('compHealth').innerHTML = compHealth;
+    userMaxstamina()
+    compMaxstamina()
+    document.getElementById('playerstamina').innerHTML = playerstamina;
+    document.getElementById('compstamina').innerHTML = compstamina;
 };
 
 function resetGame() {
-    playerHealth = 100;
-    compHealth = 100;
+    document.getElementById('instructions').innerHTML = `Instructions:<br>
+    🔺 Aggressive surpasses Sneaky 🟦<br>
+    🟦 Sneaky dodge Defensive 🟡<br>
+    🟡 Defensive protect Aggressive 🔺<br>`
+    playerstamina = 100;
+    compstamina = 100;
     document.querySelector("#gamebox").className = "gamebox"
     document.getElementById('result').innerHTML = ''
     document.getElementById('winner').innerHTML = ''
     document.getElementById('spell').innerHTML = ''
-    document.getElementById('playerHealth').innerHTML = playerHealth;
-    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('playerstamina').innerHTML = playerstamina;
+    document.getElementById('compstamina').innerHTML = compstamina;
     document.getElementById('defensive').onclick = playDefensive;
     document.getElementById('sneaky').onclick = playSneaky;
     document.getElementById('aggressive').onclick = playAggressive;
@@ -171,10 +178,10 @@ function resetGame() {
 };
 
 function gameVictory() {
-    document.getElementById('compHealth').value = compHealth;
+    document.getElementById('compstamina').value = compstamina;
 
-    if (compHealth <= 0) {
-        document.getElementById('winner').innerText = "Congratulations, you won the duel! 👍";
+    if (compstamina <= 0) {
+        document.getElementById('winner').innerText = msgWin()
         document.getElementById("gamebox").className = "gameVictory"
         document.getElementById('defensive').onclick = function () {};
         document.getElementById('sneaky').onclick = function () {};
@@ -183,10 +190,10 @@ function gameVictory() {
 }
 
 function gameOver() {
-    document.getElementById('playerHealth').value = playerHealth;
+    document.getElementById('playerstamina').value = playerstamina;
 
-    if (playerHealth <= 0) {
-        document.getElementById('winner').innerText = "You lost the duel! 👎";
+    if (playerstamina <= 0) {
+        document.getElementById('winner').innerText =  msgLose();
         document.getElementById("gamebox").className = "gameOver"
         document.getElementById('defensive').onclick = function () {};
         document.getElementById('sneaky').onclick = function () {};
@@ -198,121 +205,121 @@ function gameOver() {
 
 function expelliarmus() {
     /* -10dmg / chance stun 1 turn*/
-    compHealth = compHealth - 10
+    compstamina = compstamina - 10
     chance()
     document.getElementById('spell').innerHTML = "Expelliarmus deals 10 damage! 💥";
     backgroundRed()
-    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('compstamina').innerHTML = compstamina;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
 
 function incendio() {
     /* -5dmg / chance -10dmg 2 turns*/
-    compHealth = compHealth - 5
+    compstamina = compstamina - 5
     chance()
     document.getElementById('spell').innerHTML = "Incendio deals 5 damage! 💥";
     backgroundRed()
-    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('compstamina').innerHTML = compstamina;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
 
 function depulso() {
     /* -17dmg*/
-    compHealth = compHealth - 17
+    compstamina = compstamina - 17
     chance()
     document.getElementById('spell').innerHTML = "Depulso deals 17 damage! 💥";
     backgroundRed()
-    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('compstamina').innerHTML = compstamina;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
 
 function confringo() {
     /* -5dmg / chance stun 2 turns*/
-    compHealth = compHealth - 5
+    compstamina = compstamina - 5
     chance()
     document.getElementById('spell').innerHTML = "Confringo deals 5 damage! 💥";
     backgroundRed()
-    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('compstamina').innerHTML = compstamina;
     document.getElementById('spells-aggressive').className = "aggressive hidden"
 }
 
 function rictusempra() {
     /* -10dmg / chance stun 1 turn*/
-    compHealth = compHealth - 10
+    compstamina = compstamina - 10
     backgroundBlue()
     chance()
     document.getElementById('spell').innerHTML = "Rictusempra deals 10 damage! 💥";
-    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('compstamina').innerHTML = compstamina;
     document.getElementById('spells-sneaky').className = "sneaky hidden"
 }
 
 function flipendo() {
     /* -15dmg */
-    compHealth = compHealth - 15
+    compstamina = compstamina - 15
     backgroundBlue()
     document.getElementById('spell').innerHTML = "Flipendo deals 15 damage! 💥";
-    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('compstamina').innerHTML = compstamina;
     document.getElementById('spells-sneaky').className = "sneaky hidden"
 }
 
 function immobulus() {
     /* -5dmg / chance stun 2 turns*/
-    compHealth = compHealth - 5
+    compstamina = compstamina - 5
     backgroundBlue()
     chance()
     document.getElementById('spell').innerHTML = "Immmobulus deals 5 damage! 💥";
-    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('compstamina').innerHTML = compstamina;
     document.getElementById('spells-sneaky').className = "sneaky hidden"
 }
 
 function diffindo() {
     /* -6dmg / chance -3dmg 8 turns*/
-    compHealth = compHealth - 6
+    compstamina = compstamina - 6
     backgroundBlue()
     chance()
     document.getElementById('spell').innerHTML = "Diffindo deals 6 damage! 💥";
-    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('compstamina').innerHTML = compstamina;
     document.getElementById('spells-sneaky').className = "sneaky hidden"
 }
 
 function wiggenweld() {
     /* +5heal & +6heal 2 turns */
-    playerHealth = playerHealth + 5
+    playerstamina = playerstamina + 5
     backgroundYellow()
-    document.getElementById('spell').innerHTML = "Wiggenweld Potion increases your health by 5 points! 💚";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('spell').innerHTML = "Wiggenweld Potion increases your stamina by 5 points! 💚";
+    document.getElementById('playerstamina').innerHTML = playerstamina;
     document.getElementById('spells-defensive').className = "defensive hidden"
-    userMaxHealth()
+    userMaxstamina()
 }
 
 function episkey() {
     /* +10heal / chance +5heal 2 turns*/
-    playerHealth = playerHealth + 10
+    playerstamina = playerstamina + 10
     backgroundYellow()
     chance()
-    document.getElementById('spell').innerHTML = "Episkey increases your health by 10 points! 💚";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('spell').innerHTML = "Episkey increases your stamina by 10 points! 💚";
+    document.getElementById('playerstamina').innerHTML = playerstamina;
     document.getElementById('spells-defensive').className = "defensive hidden"
-    userMaxHealth()
+    userMaxstamina()
 }
 
 function petrificus() {
     /* -5dmg / chance stun 2 turns*/
-    compHealth = compHealth - 5
+    compstamina = compstamina - 5
     backgroundYellow()
     chance()
     document.getElementById('spell').innerHTML = "Petrificus Totalus deals 5 damage! 💥";
-    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('compstamina').innerHTML = compstamina;
     document.getElementById('spells-defensive').className = "defensive hidden"
 }
 
 function bombarda() {
     /* -10dmg / chance stun 1 turn & -10dmg 1 turn*/
-    compHealth = compHealth - 10
+    compstamina = compstamina - 10
     backgroundYellow()
     chance()
     document.getElementById('spell').innerHTML = "Bombarda deals 5 damage! 💥";
-    document.getElementById('compHealth').innerHTML = compHealth;
+    document.getElementById('compstamina').innerHTML = compstamina;
     document.getElementById('spells-defensive').className = "defensive hidden"
 }
 
@@ -320,129 +327,129 @@ function bombarda() {
 
 function expelliarmusComp() {
     /* -10dmg / chance stun 1 turn*/
-    playerHealth = playerHealth - 10
+    playerstamina = playerstamina - 10
     backgroundRed()
     chance()
     document.getElementById('spell').innerHTML = "Computer used Expelliarmus and deals 10 damage! 💥";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('playerstamina').innerHTML = playerstamina;
 }
 
 function incendioComp() {
     /* -5dmg / chance -10dmg 2 turns*/
-    playerHealth = playerHealth - 5
+    playerstamina = playerstamina - 5
     backgroundRed()
     chance()
     document.getElementById('spell').innerHTML = "Computer used Incendio and deals 5 damage! 💥";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('playerstamina').innerHTML = playerstamina;
 }
 
 function depulsoComp() {
     /* -17dmg*/
-    playerHealth = playerHealth - 17
+    playerstamina = playerstamina - 17
     backgroundRed()
     chance()
     document.getElementById('spell').innerHTML = "Computer used Depulso and deals 17 damage! 💥";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('playerstamina').innerHTML = playerstamina;
 }
 
 function confringoComp() {
     /* -5dmg / chance stun 2 turns*/
-    playerHealth = playerHealth - 5
+    playerstamina = playerstamina - 5
     backgroundRed()
     chance()
     document.getElementById('spell').innerHTML = "Computer used Confringo and deals 5 damage! 💥";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('playerstamina').innerHTML = playerstamina;
 }
 
 function rictusempraComp() {
     /* -10dmg / chance stun 1 turn*/
-    playerHealth = playerHealth - 10
+    playerstamina = playerstamina - 10
     backgroundBlue()
     chance()
     document.getElementById('spell').innerHTML = "Computer used Rictusempra and deals 10 damage! 💥";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('playerstamina').innerHTML = playerstamina;
 }
 
 function flipendoComp() {
     /* -15dmg */
-    playerHealth = playerHealth - 15
+    playerstamina = playerstamina - 15
     backgroundBlue()
     document.getElementById('spell').innerHTML = "Computer used Flipendo and deals 15 damage! 💥";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('playerstamina').innerHTML = playerstamina;
 }
 
 function immobulusComp() {
     /* -5dmg / chance stun 2 turns*/
-    playerHealth = playerHealth - 5
+    playerstamina = playerstamina - 5
     backgroundBlue()
     chance()
     document.getElementById('spell').innerHTML = "Computer used Immmobulus and deals 5 damage! 💥";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('playerstamina').innerHTML = playerstamina;
 }
 
 function diffindoComp() {
     /* -6dmg / chance -3dmg 8 turns*/
-    playerHealth = playerHealth - 6
+    playerstamina = playerstamina - 6
     backgroundBlue()
     chance()
     document.getElementById('spell').innerHTML = "Computer used Diffindo and deals 6 damage! 💥";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('playerstamina').innerHTML = playerstamina;
 }
 
 function wiggenweldComp() {
     /* +5heal & +6heal 2 turns */
-    compHealth = compHealth + 5
+    compstamina = compstamina + 5
     backgroundYellow()
-    document.getElementById('spell').innerHTML = "Computer used Wiggenweld Potion and increases health by 5 points! 🟢";
-    document.getElementById('compHealth').innerHTML = compHealth;
-    userMaxHealth()
+    document.getElementById('spell').innerHTML = "Computer used Wiggenweld Potion and increases stamina by 5 points! 🟢";
+    document.getElementById('compstamina').innerHTML = compstamina;
+    userMaxstamina()
 }
 
 function episkeyComp() {
     /* +10heal / chance +5heal 2 turns*/
-    compHealth = compHealth + 10
+    compstamina = compstamina + 10
     backgroundYellow()
     chance()
-    document.getElementById('spell').innerHTML = "Computer used Episkey and increases health by 10 points! 🟢";
-    document.getElementById('compHealth').innerHTML = compHealth;
-    userMaxHealth()
+    document.getElementById('spell').innerHTML = "Computer used Episkey and increases stamina by 10 points! 🟢";
+    document.getElementById('compstamina').innerHTML = compstamina;
+    userMaxstamina()
 }
 
 function petrificusComp() {
     /* -5dmg / chance stun 2 turns*/
-    playerHealth = playerHealth - 5
+    playerstamina = playerstamina - 5
     backgroundYellow()
     chance()
     document.getElementById('spell').innerHTML = "Computer used Petrificus Totalus and deals 5 damage! 💥";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('playerstamina').innerHTML = playerstamina;
 }
 
 function bombardaComp() {
     /* -10dmg / chance stun 1 turn & -10dmg 1 turn*/
-    playerHealth = playerHealth - 10
+    playerstamina = playerstamina - 10
     backgroundYellow()
     chance()
     document.getElementById('spell').innerHTML = "Computer used Bombarda and deals 5 damage! 💥";
-    document.getElementById('playerHealth').innerHTML = playerHealth;
+    document.getElementById('playerstamina').innerHTML = playerstamina;
 }
 
-/* Function no more than 100 health points*/
+/* Function no more than 100 stamina points*/
 
-function userMaxHealth() {
-    document.getElementById('playerHealth').innerHTML = playerHealth;
-    if (playerHealth > 100) {
-        playerHealth = 100
+function userMaxstamina() {
+    document.getElementById('playerstamina').innerHTML = playerstamina;
+    if (playerstamina > 100) {
+        playerstamina = 100
     }
 }
 
-function compMaxHealth() {
-    document.getElementById('compHealth').innerHTML = compHealth;
-    if (compHealth > 100) {
-        compHealth = 100
+function compMaxstamina() {
+    document.getElementById('compstamina').innerHTML = compstamina;
+    if (compstamina > 100) {
+        compstamina = 100
     }
 }
 
-compMaxHealth()
+compMaxstamina()
 
 /* Chance function */
 
@@ -499,4 +506,22 @@ function backgroundYellow() {
         gameOver()
         gameVictory()
     }, 500);
+}
+
+/* Messages */
+
+function msgWin(){
+    Swal.fire(
+        'Good job!',
+        'Congratulations, you won the duel! 👍',
+        'success'
+      )
+}
+
+function msgLose(){
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'You lost the duel! 👎'
+      })
 }
