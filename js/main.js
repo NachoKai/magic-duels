@@ -6,6 +6,14 @@ ToDo : Funcion Stun que, si la chance se cumple, bloquee la accion del usuario o
 let playerstamina = 100;
 let compstamina = 100;
 let playerTurn = false
+let defensiveBtn = document.getElementById('defensive')
+let sneakyBtn = document.getElementById('sneaky')
+let aggressiveBtn = document.getElementById('aggressive')
+let resetBtn = document.getElementById('reset')
+let instructions = document.getElementById('instructions')
+let aggressiveSpells = document.getElementById('spells-aggressive')
+let defensiveSpells = document.getElementById('spells-defensive')
+let sneakySpells = document.getElementById('spells-sneaky')
 const c = console.log
 
 function allowsClick() {
@@ -20,32 +28,30 @@ function notAllowsClick() {
     }
 }
 
-document.getElementById('defensive').onclick = playDefensive;
-document.getElementById('sneaky').onclick = playSneaky;
-document.getElementById('aggressive').onclick = playAggressive;
-document.getElementById('reset').onclick = resetGame;
+defensiveBtn.onclick = playDefensive;
+sneakyBtn.onclick = playSneaky;
+aggressiveBtn.onclick = playAggressive;
+resetBtn.onclick = resetGame;
+
+function hideSpellsTable() {
+    instructions.innerHTML = ''
+    aggressiveSpells.className = "aggressive hidden"
+    defensiveSpells.className = "defensive hidden"
+    sneakySpells.className = "sneaky hidden"
+}
 
 function playDefensive() {
-    document.getElementById('instructions').innerHTML = ''
-    document.getElementById('spells-aggressive').className = "aggressive hidden"
-    document.getElementById('spells-defensive').className = "defensive hidden"
-    document.getElementById('spells-sneaky').className = "sneaky hidden"
+    hideSpellsTable()
     play('Defensive');
 }
 
 function playSneaky() {
-    document.getElementById('instructions').innerHTML = ''
-    document.getElementById('spells-aggressive').className = "aggressive hidden"
-    document.getElementById('spells-defensive').className = "defensive hidden"
-    document.getElementById('spells-sneaky').className = "sneaky hidden"
+    hideSpellsTable()
     play('Sneaky');
 }
 
 function playAggressive() {
-    document.getElementById('instructions').innerHTML = ''
-    document.getElementById('spells-aggressive').className = "aggressive hidden"
-    document.getElementById('spells-defensive').className = "defensive hidden"
-    document.getElementById('spells-sneaky').className = "sneaky hidden"
+    hideSpellsTable()
     play('Aggressive');
 }
 
@@ -73,7 +79,6 @@ function play(userPlay) {
             backgroundYellow()
             compstamina++;
             playerstamina++;
-            backgroundYellow()
         } else if (compChoice === 'Sneaky') {
             document.getElementById('winner').innerHTML = "🟡 Computer wins! 😞 🟦";
             playerstamina = playerstamina - 2;
@@ -87,9 +92,9 @@ function play(userPlay) {
                 diffindoComp()
             }
         } else if (compChoice === 'Aggressive') {
-            document.getElementById('spells-defensive').className = "defensive"
-            document.getElementById('spells-sneaky').className = "sneaky hidden"
-            document.getElementById('spells-aggressive').className = "aggressive hidden"
+            defensiveSpells.className = "defensive"
+            sneakySpells.className = "sneaky hidden"
+            aggressiveSpells.className = "aggressive hidden"
             document.getElementById('spell').innerHTML = ''
             document.getElementById('winner').innerHTML = "🟡 You win! 😀 🔺 <br> Select a spell:";
             playerstamina++;
@@ -102,11 +107,10 @@ function play(userPlay) {
             backgroundBlue()
             playerstamina--;
             compstamina--;
-            backgroundBlue()
         } else if (compChoice === 'Defensive') {
-            document.getElementById('spells-defensive').className = "defensive hidden"
-            document.getElementById('spells-sneaky').className = "sneaky"
-            document.getElementById('spells-aggressive').className = "aggressive hidden"
+            defensiveSpells.className = "defensive hidden"
+            sneakySpells.className = "sneaky"
+            aggressiveSpells.className = "aggressive hidden"
             document.getElementById('spell').innerHTML = ''
             document.getElementById('winner').innerHTML = "🟦 You win! 😀 🟡 <br> Select a spell:";
             compstamina = compstamina - 2
@@ -127,7 +131,6 @@ function play(userPlay) {
         if (compChoice === 'Aggressive') {
             document.getElementById('winner').innerHTML = "🔺 It's a tie! 😮 🔺";
             backgroundRed()
-            backgroundRed()
         } else if (compChoice === 'Defensive') {
             document.getElementById('winner').innerHTML = "🔺 Computer wins! 😞 🟡";
             playerstamina = playerstamina - 2;
@@ -141,9 +144,9 @@ function play(userPlay) {
                 bombardaComp()
             }
         } else if (compChoice === 'Sneaky') {
-            document.getElementById('spells-defensive').className = "defensive hidden"
-            document.getElementById('spells-sneaky').className = "sneaky hidden"
-            document.getElementById('spells-aggressive').className = "aggressive"
+            defensiveSpells.className = "defensive hidden"
+            sneakySpells.className = "sneaky hidden"
+            aggressiveSpells.className = "aggressive"
             document.getElementById('spell').innerHTML = ''
             document.getElementById('winner').innerHTML = "🔺 You win! 😀 🟦 <br> Select a spell:";
             compstamina = compstamina - 2;
@@ -157,7 +160,7 @@ function play(userPlay) {
 };
 
 function resetGame() {
-    document.getElementById('instructions').innerHTML = `Instructions:<br>
+    instructions.innerHTML = `Instructions:<br>
     🔺 Aggressive surpasses Sneaky 🟦<br>
     🟦 Sneaky dodge Defensive 🟡<br>
     🟡 Defensive protect Aggressive 🔺<br>`
@@ -169,12 +172,12 @@ function resetGame() {
     document.getElementById('spell').innerHTML = ''
     document.getElementById('playerstamina').innerHTML = playerstamina;
     document.getElementById('compstamina').innerHTML = compstamina;
-    document.getElementById('defensive').onclick = playDefensive;
-    document.getElementById('sneaky').onclick = playSneaky;
-    document.getElementById('aggressive').onclick = playAggressive;
-    document.getElementById('spells-defensive').className = "defensive hidden"
-    document.getElementById('spells-sneaky').className = "sneaky hidden"
-    document.getElementById('spells-aggressive').className = "aggressive hidden"
+    defensiveBtn.onclick = playDefensive;
+    sneakyBtn.onclick = playSneaky;
+    aggressiveBtn.onclick = playAggressive;
+    defensiveSpells.className = "defensive hidden"
+    sneakySpells.className = "sneaky hidden"
+    aggressiveSpells.className = "aggressive hidden"
 };
 
 function gameVictory() {
@@ -183,9 +186,9 @@ function gameVictory() {
     if (compstamina <= 0) {
         document.getElementById('winner').innerText = msgWin()
         document.getElementById("gamebox").className = "gameVictory"
-        document.getElementById('defensive').onclick = function () {};
-        document.getElementById('sneaky').onclick = function () {};
-        document.getElementById('aggressive').onclick = function () {};
+        defensiveBtn.onclick = function () {};
+        sneakyBtn.onclick = function () {};
+        aggressiveBtn.onclick = function () {};
     }
 }
 
@@ -193,11 +196,11 @@ function gameOver() {
     document.getElementById('playerstamina').value = playerstamina;
 
     if (playerstamina <= 0) {
-        document.getElementById('winner').innerText =  msgLose();
+        document.getElementById('winner').innerText = msgLose();
         document.getElementById("gamebox").className = "gameOver"
-        document.getElementById('defensive').onclick = function () {};
-        document.getElementById('sneaky').onclick = function () {};
-        document.getElementById('aggressive').onclick = function () {};
+        defensiveBtn.onclick = function () {};
+        sneakyBtn.onclick = function () {};
+        aggressiveBtn.onclick = function () {};
     }
 }
 
@@ -210,7 +213,7 @@ function expelliarmus() {
     document.getElementById('spell').innerHTML = "Expelliarmus deals 10 damage! 💥";
     backgroundRed()
     document.getElementById('compstamina').innerHTML = compstamina;
-    document.getElementById('spells-aggressive').className = "aggressive hidden"
+    aggressiveSpells.className = "aggressive hidden"
 }
 
 function incendio() {
@@ -220,7 +223,7 @@ function incendio() {
     document.getElementById('spell').innerHTML = "Incendio deals 5 damage! 💥";
     backgroundRed()
     document.getElementById('compstamina').innerHTML = compstamina;
-    document.getElementById('spells-aggressive').className = "aggressive hidden"
+    aggressiveSpells.className = "aggressive hidden"
 }
 
 function depulso() {
@@ -230,7 +233,7 @@ function depulso() {
     document.getElementById('spell').innerHTML = "Depulso deals 17 damage! 💥";
     backgroundRed()
     document.getElementById('compstamina').innerHTML = compstamina;
-    document.getElementById('spells-aggressive').className = "aggressive hidden"
+    aggressiveSpells.className = "aggressive hidden"
 }
 
 function confringo() {
@@ -240,7 +243,7 @@ function confringo() {
     document.getElementById('spell').innerHTML = "Confringo deals 5 damage! 💥";
     backgroundRed()
     document.getElementById('compstamina').innerHTML = compstamina;
-    document.getElementById('spells-aggressive').className = "aggressive hidden"
+    aggressiveSpells.className = "aggressive hidden"
 }
 
 function rictusempra() {
@@ -250,7 +253,7 @@ function rictusempra() {
     chance()
     document.getElementById('spell').innerHTML = "Rictusempra deals 10 damage! 💥";
     document.getElementById('compstamina').innerHTML = compstamina;
-    document.getElementById('spells-sneaky').className = "sneaky hidden"
+    sneakySpells.className = "sneaky hidden"
 }
 
 function flipendo() {
@@ -259,7 +262,7 @@ function flipendo() {
     backgroundBlue()
     document.getElementById('spell').innerHTML = "Flipendo deals 15 damage! 💥";
     document.getElementById('compstamina').innerHTML = compstamina;
-    document.getElementById('spells-sneaky').className = "sneaky hidden"
+    sneakySpells.className = "sneaky hidden"
 }
 
 function immobulus() {
@@ -269,7 +272,7 @@ function immobulus() {
     chance()
     document.getElementById('spell').innerHTML = "Immmobulus deals 5 damage! 💥";
     document.getElementById('compstamina').innerHTML = compstamina;
-    document.getElementById('spells-sneaky').className = "sneaky hidden"
+    sneakySpells.className = "sneaky hidden"
 }
 
 function diffindo() {
@@ -279,7 +282,7 @@ function diffindo() {
     chance()
     document.getElementById('spell').innerHTML = "Diffindo deals 6 damage! 💥";
     document.getElementById('compstamina').innerHTML = compstamina;
-    document.getElementById('spells-sneaky').className = "sneaky hidden"
+    sneakySpells.className = "sneaky hidden"
 }
 
 function wiggenweld() {
@@ -288,7 +291,7 @@ function wiggenweld() {
     backgroundYellow()
     document.getElementById('spell').innerHTML = "Wiggenweld Potion increases your stamina by 5 points! 💚";
     document.getElementById('playerstamina').innerHTML = playerstamina;
-    document.getElementById('spells-defensive').className = "defensive hidden"
+    defensiveSpells.className = "defensive hidden"
     userMaxstamina()
 }
 
@@ -299,7 +302,7 @@ function episkey() {
     chance()
     document.getElementById('spell').innerHTML = "Episkey increases your stamina by 10 points! 💚";
     document.getElementById('playerstamina').innerHTML = playerstamina;
-    document.getElementById('spells-defensive').className = "defensive hidden"
+    defensiveSpells.className = "defensive hidden"
     userMaxstamina()
 }
 
@@ -310,7 +313,7 @@ function petrificus() {
     chance()
     document.getElementById('spell').innerHTML = "Petrificus Totalus deals 5 damage! 💥";
     document.getElementById('compstamina').innerHTML = compstamina;
-    document.getElementById('spells-defensive').className = "defensive hidden"
+    defensiveSpells.className = "defensive hidden"
 }
 
 function bombarda() {
@@ -320,7 +323,7 @@ function bombarda() {
     chance()
     document.getElementById('spell').innerHTML = "Bombarda deals 5 damage! 💥";
     document.getElementById('compstamina').innerHTML = compstamina;
-    document.getElementById('spells-defensive').className = "defensive hidden"
+    defensiveSpells.className = "defensive hidden"
 }
 
 /* Spells Computer */
@@ -510,18 +513,18 @@ function backgroundYellow() {
 
 /* Messages */
 
-function msgWin(){
+function msgWin() {
     Swal.fire(
         'Good job!',
         'Congratulations, you won the duel! 👍',
         'success'
-      )
+    )
 }
 
-function msgLose(){
+function msgLose() {
     Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'You lost the duel! 👎'
-      })
+    })
 }
