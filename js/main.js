@@ -15,19 +15,8 @@ let spell = document.getElementById('spell')
 let gamebox = document.getElementById("gamebox")
 let pStamina = document.getElementById('playerstamina')
 let cStamina = document.getElementById('compstamina')
+let $chance = false
 const c = console.log
-
-function allowsClick() {
-    if (playerTurn === false) {
-        return playerTurn = true
-    }
-}
-
-function notAllowsClick() {
-    if (playerTurn === true) {
-        return playerTurn = false
-    }
-}
 
 defensiveBtn.onclick = playDefensive;
 sneakyBtn.onclick = playSneaky;
@@ -455,9 +444,13 @@ compMaxstamina()
 
 function chance() {
     if (Math.random() <= 0.4) {
-        c('Triggered!');
+        if ($chance === false) {
+            return $chance = true
+        }
     } else {
-        c('Failed!');
+        if ($chance === true) {
+            return $chance = false
+        }
     }
 }
 
@@ -524,4 +517,18 @@ function msgLose() {
         title: 'Oops...',
         text: 'You lost the duel! 👎'
     })
+}
+
+/* Allow click functions */
+
+function allowsClick() {
+    if (playerTurn === false) {
+        return playerTurn = true
+    }
+}
+
+function notAllowsClick() {
+    if (playerTurn === true) {
+        return playerTurn = false
+    }
 }
