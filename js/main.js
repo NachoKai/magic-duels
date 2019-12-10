@@ -208,7 +208,7 @@ function gameOver() {
 /* Spells User */
 
 function expelliarmus() {
-    /* -10dmg / chance stun 1 turn*/
+    /* chance stun 1 turn*/
     compstamina = compstamina - 10
     chance()
     spell.innerHTML = "Expelliarmus deals 10 damage! 💥";
@@ -218,7 +218,7 @@ function expelliarmus() {
 }
 
 function incendio() {
-    /* -5dmg / chance -10dmg 2 turns*/
+    /* chance -10dmg 2 turns*/
     compstamina = compstamina - 5
     chance()
     spell.innerHTML = "Incendio deals 5 damage! 💥";
@@ -228,7 +228,6 @@ function incendio() {
 }
 
 function depulso() {
-    /* -17dmg*/
     compstamina = compstamina - 17
     chance()
     spell.innerHTML = "Depulso deals 17 damage! 💥";
@@ -238,7 +237,7 @@ function depulso() {
 }
 
 function confringo() {
-    /* -5dmg / chance stun 2 turns*/
+    /* chance stun 2 turns*/
     compstamina = compstamina - 5
     chance()
     spell.innerHTML = "Confringo deals 5 damage! 💥";
@@ -248,7 +247,7 @@ function confringo() {
 }
 
 function rictusempra() {
-    /* -10dmg / chance stun 1 turn*/
+    /* chance stun 1 turn*/
     compstamina = compstamina - 10
     backgroundBlue()
     chance()
@@ -258,7 +257,6 @@ function rictusempra() {
 }
 
 function flipendo() {
-    /* -15dmg */
     compstamina = compstamina - 15
     backgroundBlue()
     spell.innerHTML = "Flipendo deals 15 damage! 💥";
@@ -267,7 +265,7 @@ function flipendo() {
 }
 
 function immobulus() {
-    /* -5dmg / chance stun 2 turns*/
+    /* chance stun 2 turns*/
     compstamina = compstamina - 5
     backgroundBlue()
     chance()
@@ -277,7 +275,7 @@ function immobulus() {
 }
 
 function diffindo() {
-    /* -6dmg / chance -3dmg 8 turns*/
+    /* chance -3dmg 8 turns*/
     compstamina = compstamina - 6
     backgroundBlue()
     chance()
@@ -287,7 +285,7 @@ function diffindo() {
 }
 
 function wiggenweld() {
-    /* +5heal & +6heal 2 turns */
+    /* +6heal 2 turns */
     playerstamina = playerstamina + 5
     backgroundYellow()
     spell.innerHTML = "Wiggenweld Potion increases your stamina by 5 points! 💚";
@@ -297,7 +295,7 @@ function wiggenweld() {
 }
 
 function episkey() {
-    /* +10heal / chance +5heal 2 turns*/
+    /* chance +5heal 2 turns*/
     playerstamina = playerstamina + 10
     backgroundYellow()
     chance()
@@ -308,7 +306,7 @@ function episkey() {
 }
 
 function petrificus() {
-    /* -5dmg / chance stun 2 turns*/
+    /* chance stun 2 turns*/
     compstamina = compstamina - 5
     backgroundYellow()
     chance()
@@ -318,7 +316,7 @@ function petrificus() {
 }
 
 function bombarda() {
-    /* -10dmg / chance stun 1 turn & -10dmg 1 turn*/
+    /* chance stun 1 turn & -10dmg 1 turn*/
     compstamina = compstamina - 10
     backgroundYellow()
     chance()
@@ -330,7 +328,7 @@ function bombarda() {
 /* Spells Computer */
 
 function expelliarmusComp() {
-    /* -10dmg / chance stun 1 turn*/
+    /* chance stun 1 turn*/
     playerstamina = playerstamina - 10
     backgroundRed()
     chance()
@@ -339,7 +337,7 @@ function expelliarmusComp() {
 }
 
 function incendioComp() {
-    /* -5dmg / chance -10dmg 2 turns*/
+    /* chance -10dmg 2 turns*/
     playerstamina = playerstamina - 5
     backgroundRed()
     chance()
@@ -348,7 +346,6 @@ function incendioComp() {
 }
 
 function depulsoComp() {
-    /* -17dmg*/
     playerstamina = playerstamina - 17
     backgroundRed()
     chance()
@@ -357,7 +354,7 @@ function depulsoComp() {
 }
 
 function confringoComp() {
-    /* -5dmg / chance stun 2 turns*/
+    /* chance stun 2 turns*/
     playerstamina = playerstamina - 5
     backgroundRed()
     chance()
@@ -366,7 +363,7 @@ function confringoComp() {
 }
 
 function rictusempraComp() {
-    /* -10dmg / chance stun 1 turn*/
+    /* chance stun 1 turn*/
     playerstamina = playerstamina - 10
     backgroundBlue()
     chance()
@@ -375,7 +372,6 @@ function rictusempraComp() {
 }
 
 function flipendoComp() {
-    /* -15dmg */
     playerstamina = playerstamina - 15
     backgroundBlue()
     spell.innerHTML = "Computer used Flipendo and deals 15 damage! 💥";
@@ -383,7 +379,7 @@ function flipendoComp() {
 }
 
 function immobulusComp() {
-    /* -5dmg / chance stun 2 turns*/
+    /* chance stun 2 turns*/
     playerstamina = playerstamina - 5
     backgroundBlue()
     chance()
@@ -392,7 +388,7 @@ function immobulusComp() {
 }
 
 function diffindoComp() {
-    /* -6dmg / chance -3dmg 8 turns*/
+    /* chance -3dmg 8 turns*/
     playerstamina = playerstamina - 6
     backgroundBlue()
     chance()
@@ -401,7 +397,7 @@ function diffindoComp() {
 }
 
 function wiggenweldComp() {
-    /* +5heal & +6heal 2 turns */
+    /* +6heal 2 turns */
     compstamina = compstamina + 5
     backgroundYellow()
     spell.innerHTML = "Computer used Wiggenweld Potion and increases stamina by 5 points! 🟢";
@@ -410,7 +406,7 @@ function wiggenweldComp() {
 }
 
 function episkeyComp() {
-    /* +10heal / chance +5heal 2 turns*/
+    /* chance +5heal 2 turns*/
     compstamina = compstamina + 10
     backgroundYellow()
     chance()
@@ -420,7 +416,7 @@ function episkeyComp() {
 }
 
 function petrificusComp() {
-    /* -5dmg / chance stun 2 turns*/
+    /* chance stun 2 turns*/
     playerstamina = playerstamina - 5
     backgroundYellow()
     chance()
@@ -429,7 +425,7 @@ function petrificusComp() {
 }
 
 function bombardaComp() {
-    /* -10dmg / chance stun 1 turn & -10dmg 1 turn*/
+    /* chance stun 1 turn & -10dmg 1 turn*/
     playerstamina = playerstamina - 10
     backgroundYellow()
     chance()
