@@ -66,6 +66,7 @@ function play(userPlay) {
     if (userPlay === 'Defensive') {
         if (compChoice === 'Defensive') {
             winner.innerHTML = "🟡 It's a tie! 😮 🟡";
+            spell.innerHTML = ''
             backgroundYellow()
             compstamina++;
             playerstamina++;
@@ -94,6 +95,7 @@ function play(userPlay) {
     } else if (userPlay === 'Sneaky') {
         if (compChoice === 'Sneaky') {
             winner.innerHTML = "🟦 It's a tie! 😮 🟦";
+            spell.innerHTML = ''
             backgroundBlue()
             playerstamina--;
             compstamina--;
@@ -120,6 +122,7 @@ function play(userPlay) {
     } else if (userPlay === 'Aggressive') {
         if (compChoice === 'Aggressive') {
             winner.innerHTML = "🔺 It's a tie! 😮 🔺";
+            spell.innerHTML = ''
             backgroundRed()
         } else if (compChoice === 'Defensive') {
             winner.innerHTML = "🔺 Computer wins! 😞 🟡";
