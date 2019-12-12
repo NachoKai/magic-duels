@@ -41,6 +41,14 @@ p {
   min-height: calc(100vh - 21px);
 }
 
+.stamina-board {
+  padding-top: 10px;
+}
+
+.spells {
+  padding-top: 10px;
+}
+
 .gamebox {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -56,16 +64,11 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   color: #fff;
   text-align: center;
-  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
 }
 
 .title {
@@ -122,7 +125,7 @@ tbody {
 }
 
 .computeranswer {
-  padding: 5px;
+  padding-top: 10px;
   border: 2px inset #fff;
   text-align: center;
 }
@@ -322,73 +325,67 @@ footer a {
 
 .backgYellow {
   background: yellow !important;
-  color: #fff;
   padding-bottom: 10px;
   padding-top: 10px;
-  text-align: center;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 100vw;
+  color: #fff;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .backgBlue {
   background: blue !important;
-  color: #fff;
   padding-bottom: 10px;
   padding-top: 10px;
-  text-align: center;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 100vw;
+  color: #fff;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .backgRed {
   background: red !important;
-  color: #fff;
   padding-bottom: 10px;
   padding-top: 10px;
-  text-align: center;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 100vw;
+  color: #fff;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  flex-direction: column;
 }
 /*# sourceMappingURL=main.css.map */

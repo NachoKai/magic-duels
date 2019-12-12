@@ -40,6 +40,14 @@ p {
     min-height: calc(100vh - 21px);
 }
 
+.stamina-board {
+    padding-top: 10px;
+}
+
+.spells {
+    padding-top: 10px;
+}
+
 .gamebox {
     padding-bottom: 10px;
     padding-top: 10px;
@@ -50,13 +58,10 @@ p {
     max-width: 650px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     color: #fff;
     text-align: center;
-    display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
 }
 
 .title {
@@ -113,7 +118,7 @@ tbody {
 }
 
 .computeranswer {
-    padding: 5px;
+    padding-top: 10px;
     border: 2px inset #fff;
     text-align: center;
 }
@@ -337,48 +342,48 @@ footer {
 
 .backgYellow {
     background: yellow !important;
-    color: #fff;
     padding-bottom: 10px;
     padding-top: 10px;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
     min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
-    min-width: 100vw;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .backgBlue {
     background: blue !important;
-    color: #fff;
     padding-bottom: 10px;
     padding-top: 10px;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
     min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
-    min-width: 100vw;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .backgRed {
     background: red !important;
-    color: #fff;
     padding-bottom: 10px;
     padding-top: 10px;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
     min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
-    min-width: 100vw;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
