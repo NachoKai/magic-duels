@@ -41,6 +41,8 @@ p {
 }
 
 .gamebox {
+    padding-bottom: 10px;
+    padding-top: 10px;
     min-height: calc(100vh - 21px);
     margin-left: auto;
     margin-right: auto;
@@ -50,7 +52,6 @@ p {
     flex-direction: column;
     justify-content: center;
     color: #fff;
-    padding: 10px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -161,7 +162,6 @@ footer {
 }
 
 .gameVictory {
-    padding: 10px;
     background-color: green;
     color: white;
     text-align: center;
@@ -172,7 +172,6 @@ footer {
 }
 
 .gameOver {
-    padding: 10px;
     background-color: red;
     color: white;
     text-align: center;
@@ -377,3 +376,10 @@ footer {
     margin-right: auto;
     min-width: 100vw;
 }
+
+#my-scrollbar {
+    width: 500px;
+    height: 500px;
+    overflow: auto;
+  }
+  
