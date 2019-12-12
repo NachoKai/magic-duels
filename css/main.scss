@@ -46,6 +46,7 @@ p {
 
 .spells {
     padding-top: 10px;
+    font-size: 20px;
 }
 
 .gamebox {
@@ -57,6 +58,8 @@ p {
     background-color: #000;
     max-width: 650px;
     display: flex;
+    align-items: center;
+    align-content: center;
     flex-direction: column;
     color: #fff;
     text-align: center;
@@ -118,7 +121,7 @@ tbody {
 }
 
 .computeranswer {
-    padding-top: 10px;
+    margin-top: 10px;
     border: 2px inset #fff;
     text-align: center;
 }
