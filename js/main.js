@@ -507,18 +507,30 @@ function backgroundYellow() {
 /* Messages */
 
 function msgWin() {
-    Swal.fire(
-        'Good job!',
-        'Congratulations, you won the duel! 👍',
-        'success'
-    )
+    Swal.fire({
+        title: "Congratulations!",
+        html: `
+    <img class="img-fluid" src="./img/win.jpg" alt="You win">
+    <p class="h4">You won the duel.</p>
+    <span><input type="button" value="Reset" class="btn btn-outline-danger"
+                onclick="window.location.reload(false)"></span>`,
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        showConfirmButton: false,
+    })
 }
 
 function msgLose() {
     Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'You lost the duel! 👎'
+        title: "Oops!",
+        html: `
+    <img class="img-fluid" src="./img/lose.jpg" alt="You lose">
+    <p class="h4">You lost the duel.</p>
+    <span><input type="button" value="Reset" class="btn btn-outline-danger"
+                onclick="window.location.reload(false)"></span>`,
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        showConfirmButton: false,
     })
 }
 
