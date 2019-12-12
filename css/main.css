@@ -15,8 +15,13 @@
   -ms-user-select: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #000 !important;
+  background-image: url("https://i.ibb.co/fnYmCC3/back1.jpg");
+  background-size: cover;
   color: #fff;
   text-align: center;
 }
@@ -31,13 +36,17 @@ p {
 }
 
 .container {
-  background-color: #000 !important;
   color: #fff;
   min-width: 98vw;
-  min-height: calc(100vh - 25px);
+  min-height: calc(100vh - 21px);
 }
 
 .gamebox {
+  min-height: calc(100vh - 21px);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000;
+  max-width: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,10 +57,8 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #000 !important;
   color: #fff;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 10px;
   text-align: center;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -152,7 +159,7 @@ footer {
   background-color: #000 !important;
   color: #fff;
   border-top: solid 1px #fff;
-  height: 20px;
+  height: 21px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -167,19 +174,25 @@ footer a {
 }
 
 .gameVictory {
-  padding: 20px;
+  padding: 10px;
   background-color: green;
   color: white;
-  min-height: 100vh;
   text-align: center;
+  min-height: calc(100vh - 21px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 650px;
 }
 
 .gameOver {
-  padding: 20px;
+  padding: 10px;
   background-color: red;
   color: white;
-  min-height: 100vh;
   text-align: center;
+  min-height: calc(100vh - 21px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 650px;
 }
 
 .hidden {
@@ -320,6 +333,10 @@ footer a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100vw;
 }
 
 .backgBlue {
@@ -340,6 +357,10 @@ footer a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100vw;
 }
 
 .backgRed {
@@ -360,5 +381,9 @@ footer a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 100vw;
 }
 /*# sourceMappingURL=main.css.map */

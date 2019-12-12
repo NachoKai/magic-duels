@@ -14,8 +14,13 @@
     -ms-user-select: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #000 !important;
+    background-image: url("https://i.ibb.co/fnYmCC3/back1.jpg");
+    background-size: cover;
     color: #fff;
     text-align: center;
 }
@@ -30,20 +35,22 @@ p {
 }
 
 .container {
-    background-color: #000 !important;
     color: #fff;
     min-width: 98vw;
-    min-height: calc(100vh - 25px);
+    min-height: calc(100vh - 21px);
 }
 
 .gamebox {
+    min-height: calc(100vh - 21px);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #000;
+    max-width: 650px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #000 !important;
     color: #fff;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding: 10px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -143,7 +150,7 @@ footer {
     background-color: #000 !important;
     color: #fff;
     border-top: solid 1px #fff;
-    height: 20px;
+    height: 21px;
     align-items: flex-end;
     justify-content: center;
     text-align: center;
@@ -154,19 +161,25 @@ footer {
 }
 
 .gameVictory {
-    padding: 20px;
+    padding: 10px;
     background-color: green;
     color: white;
-    min-height: 100vh;
     text-align: center;
+    min-height: calc(100vh - 21px);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
 }
 
 .gameOver {
-    padding: 20px;
+    padding: 10px;
     background-color: red;
     color: white;
-    min-height: 100vh;
     text-align: center;
+    min-height: calc(100vh - 21px);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
 }
 
 .hidden {
@@ -327,6 +340,12 @@ footer {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+
+
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100vw;
 }
 
 .backgBlue {
@@ -339,6 +358,11 @@ footer {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100vw;
 }
 
 .backgRed {
@@ -351,4 +375,9 @@ footer {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100vw;
 }
