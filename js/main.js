@@ -11,6 +11,7 @@ let defensiveSpells = document.getElementById('spells-defensive')
 let sneakySpells = document.getElementById('spells-sneaky')
 let result = document.getElementById('result')
 let winner = document.getElementById('winner')
+let select = document.getElementById('select')
 let spell = document.getElementById('spell')
 let chanceMsg = document.getElementById('chance')
 let gamebox = document.getElementById("gamebox")
@@ -101,7 +102,8 @@ function play(userPlay) {
             aggressiveSpells.className = "aggressive hidden"
             spell.innerHTML = ''
             chanceMsg.innerHTML = ''
-            winner.innerHTML = "🟡 You win! 🔺 <br> Select a spell:";
+            winner.innerHTML = "🟡 You win! 🔺";
+            select.innerHTML = "Select a spell:"
             playerstamina++;
             compstamina--;
         }
@@ -120,7 +122,8 @@ function play(userPlay) {
             aggressiveSpells.className = "aggressive hidden"
             spell.innerHTML = ''
             chanceMsg.innerHTML = ''
-            winner.innerHTML = "🟦 You win! 🟡 <br> Select a spell:";
+            winner.innerHTML = "🟦 You win! 🟡";
+            select.innerHTML = "Select a spell:"
             compstamina = compstamina - 2
         } else if (compChoice === 'Aggressive') {
             winner.innerHTML = "🟦 Computer wins! 🔺";
@@ -159,7 +162,8 @@ function play(userPlay) {
             aggressiveSpells.className = "aggressive"
             spell.innerHTML = ''
             chanceMsg.innerHTML = ''
-            winner.innerHTML = "🔺 You win! 🟦 <br> Select a spell:";
+            winner.innerHTML = "🔺 You win! 🟦";
+            select.innerHTML = "Select a spell:"
             compstamina = compstamina - 2;
         }
     }
@@ -222,6 +226,7 @@ function gameOver() {
 function expelliarmus() {
     compstamina = compstamina - 10
     stun()
+    select.innerHTML = ""
     spell.innerHTML = "Expelliarmus deals 10 damage!";
     chanceMsg.innerHTML = `Stun chance 1 turn: ${stun()}`;
     backgroundRed()
@@ -232,6 +237,7 @@ function expelliarmus() {
 function incendio() {
     compstamina = compstamina - 5
     stun()
+    select.innerHTML = ""
     spell.innerHTML = "Incendio deals 5 damage!";
     chanceMsg.innerHTML = `10 Damage chance 2 turns: ${stun()}`;
     backgroundRed()
@@ -242,6 +248,7 @@ function incendio() {
 function depulso() {
     compstamina = compstamina - 17
     stun()
+    select.innerHTML = ""
     spell.innerHTML = "Depulso deals 17 damage!";
     backgroundRed()
     cStamina.innerHTML = compstamina;
@@ -251,6 +258,7 @@ function depulso() {
 function confringo() {
     compstamina = compstamina - 5
     stun()
+    select.innerHTML = ""
     spell.innerHTML = "Confringo deals 5 damage!";
     chanceMsg.innerHTML = `Stun chance 2 turns: ${stun()}`;
     backgroundRed()
@@ -262,6 +270,7 @@ function rictusempra() {
     compstamina = compstamina - 10
     backgroundBlue()
     stun()
+    select.innerHTML = ""
     spell.innerHTML = "Rictusempra deals 10 damage!";
     chanceMsg.innerHTML = `Stun chance 1 turn: ${stun()}`;
     cStamina.innerHTML = compstamina;
@@ -271,6 +280,7 @@ function rictusempra() {
 function flipendo() {
     compstamina = compstamina - 15
     backgroundBlue()
+    select.innerHTML = ""
     spell.innerHTML = "Flipendo deals 15 damage!";
     cStamina.innerHTML = compstamina;
     sneakySpells.className = "sneaky hidden"
@@ -280,6 +290,7 @@ function immobulus() {
     compstamina = compstamina - 5
     backgroundBlue()
     stun()
+    select.innerHTML = ""
     spell.innerHTML = "Immmobulus deals 5 damage!";
     chanceMsg.innerHTML = `Stun chance 2 turns: ${stun()}`;
     cStamina.innerHTML = compstamina;
@@ -290,6 +301,7 @@ function diffindo() {
     compstamina = compstamina - 6
     backgroundBlue()
     stun()
+    select.innerHTML = ""
     spell.innerHTML = "Diffindo deals 6 damage!";
     chanceMsg.innerHTML = `3 Damage chance 8 turns: ${stun()}`;
     cStamina.innerHTML = compstamina;
@@ -299,6 +311,7 @@ function diffindo() {
 function wiggenweld() {
     playerstamina = playerstamina + 5
     backgroundYellow()
+    select.innerHTML = ""
     spell.innerHTML = "Wiggenweld Potion increases your stamina by 5 points!";
     chanceMsg.innerHTML = `6 Heal chance 2 turns: ${stun()}`;
     pStamina.innerHTML = playerstamina;
@@ -310,6 +323,7 @@ function episkey() {
     playerstamina = playerstamina + 10
     backgroundYellow()
     stun()
+    select.innerHTML = ""
     spell.innerHTML = "Episkey increases your stamina by 10 points!";
     chanceMsg.innerHTML = `5 Heal chance 2 turns: ${stun()}`;
     pStamina.innerHTML = playerstamina;
@@ -321,6 +335,7 @@ function petrificus() {
     compstamina = compstamina - 5
     backgroundYellow()
     stun()
+    select.innerHTML = ""
     spell.innerHTML = "Petrificus Totalus deals 5 damage!";
     chanceMsg.innerHTML = `Stun chance 2 turns: ${stun()}`;
     cStamina.innerHTML = compstamina;
@@ -331,6 +346,7 @@ function bombarda() {
     compstamina = compstamina - 10
     backgroundYellow()
     stun()
+    select.innerHTML = ""
     spell.innerHTML = "Bombarda deals 5 damage!";
     chanceMsg.innerHTML = `10 Damage and Stun chance 1 turn: ${stun()}`;
     cStamina.innerHTML = compstamina;
