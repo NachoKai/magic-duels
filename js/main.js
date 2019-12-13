@@ -222,7 +222,7 @@ function gameOver() {
 function expelliarmus() {
     compstamina = compstamina - 10
     stun()
-    spell.innerHTML = "Expelliarmus deals 10 damage! 💥";
+    spell.innerHTML = "Expelliarmus deals 10 damage!";
     chanceMsg.innerHTML = `Stun chance 1 turn: ${stun()}`;
     backgroundRed()
     cStamina.innerHTML = compstamina;
@@ -232,7 +232,7 @@ function expelliarmus() {
 function incendio() {
     compstamina = compstamina - 5
     stun()
-    spell.innerHTML = "Incendio deals 5 damage! 💥";
+    spell.innerHTML = "Incendio deals 5 damage!";
     chanceMsg.innerHTML = `10 Damage chance 2 turns: ${stun()}`;
     backgroundRed()
     cStamina.innerHTML = compstamina;
@@ -242,7 +242,7 @@ function incendio() {
 function depulso() {
     compstamina = compstamina - 17
     stun()
-    spell.innerHTML = "Depulso deals 17 damage! 💥";
+    spell.innerHTML = "Depulso deals 17 damage!";
     backgroundRed()
     cStamina.innerHTML = compstamina;
     aggressiveSpells.className = "aggressive hidden"
@@ -251,7 +251,7 @@ function depulso() {
 function confringo() {
     compstamina = compstamina - 5
     stun()
-    spell.innerHTML = "Confringo deals 5 damage! 💥";
+    spell.innerHTML = "Confringo deals 5 damage!";
     chanceMsg.innerHTML = `Stun chance 2 turns: ${stun()}`;
     backgroundRed()
     cStamina.innerHTML = compstamina;
@@ -262,7 +262,7 @@ function rictusempra() {
     compstamina = compstamina - 10
     backgroundBlue()
     stun()
-    spell.innerHTML = "Rictusempra deals 10 damage! 💥";
+    spell.innerHTML = "Rictusempra deals 10 damage!";
     chanceMsg.innerHTML = `Stun chance 1 turn: ${stun()}`;
     cStamina.innerHTML = compstamina;
     sneakySpells.className = "sneaky hidden"
@@ -271,7 +271,7 @@ function rictusempra() {
 function flipendo() {
     compstamina = compstamina - 15
     backgroundBlue()
-    spell.innerHTML = "Flipendo deals 15 damage! 💥";
+    spell.innerHTML = "Flipendo deals 15 damage!";
     cStamina.innerHTML = compstamina;
     sneakySpells.className = "sneaky hidden"
 }
@@ -280,7 +280,7 @@ function immobulus() {
     compstamina = compstamina - 5
     backgroundBlue()
     stun()
-    spell.innerHTML = "Immmobulus deals 5 damage! 💥";
+    spell.innerHTML = "Immmobulus deals 5 damage!";
     chanceMsg.innerHTML = `Stun chance 2 turns: ${stun()}`;
     cStamina.innerHTML = compstamina;
     sneakySpells.className = "sneaky hidden"
@@ -290,7 +290,7 @@ function diffindo() {
     compstamina = compstamina - 6
     backgroundBlue()
     stun()
-    spell.innerHTML = "Diffindo deals 6 damage! 💥";
+    spell.innerHTML = "Diffindo deals 6 damage!";
     chanceMsg.innerHTML = `3 Damage chance 8 turns: ${stun()}`;
     cStamina.innerHTML = compstamina;
     sneakySpells.className = "sneaky hidden"
@@ -299,7 +299,7 @@ function diffindo() {
 function wiggenweld() {
     playerstamina = playerstamina + 5
     backgroundYellow()
-    spell.innerHTML = "Wiggenweld Potion increases your stamina by 5 points! 💚";
+    spell.innerHTML = "Wiggenweld Potion increases your stamina by 5 points!";
     chanceMsg.innerHTML = `6 Heal chance 2 turns: ${stun()}`;
     pStamina.innerHTML = playerstamina;
     defensiveSpells.className = "defensive hidden"
@@ -310,7 +310,7 @@ function episkey() {
     playerstamina = playerstamina + 10
     backgroundYellow()
     stun()
-    spell.innerHTML = "Episkey increases your stamina by 10 points! 💚";
+    spell.innerHTML = "Episkey increases your stamina by 10 points!";
     chanceMsg.innerHTML = `5 Heal chance 2 turns: ${stun()}`;
     pStamina.innerHTML = playerstamina;
     defensiveSpells.className = "defensive hidden"
@@ -321,7 +321,7 @@ function petrificus() {
     compstamina = compstamina - 5
     backgroundYellow()
     stun()
-    spell.innerHTML = "Petrificus Totalus deals 5 damage! 💥";
+    spell.innerHTML = "Petrificus Totalus deals 5 damage!";
     chanceMsg.innerHTML = `Stun chance 2 turns: ${stun()}`;
     cStamina.innerHTML = compstamina;
     defensiveSpells.className = "defensive hidden"
@@ -331,7 +331,7 @@ function bombarda() {
     compstamina = compstamina - 10
     backgroundYellow()
     stun()
-    spell.innerHTML = "Bombarda deals 5 damage! 💥";
+    spell.innerHTML = "Bombarda deals 5 damage!";
     chanceMsg.innerHTML = `10 Damage and Stun chance 1 turn: ${stun()}`;
     cStamina.innerHTML = compstamina;
     defensiveSpells.className = "defensive hidden"
@@ -342,7 +342,7 @@ function expelliarmusComp() {
     playerstamina = playerstamina - 10
     backgroundRed()
     stun()
-    spell.innerHTML = "Computer used Expelliarmus and deals 10 damage! 💥";
+    spell.innerHTML = "Computer used Expelliarmus and deals 10 damage!";
     chanceMsg.innerHTML = `Stun chance 1 turn: ${stun()}`;
     pStamina.innerHTML = playerstamina;
 }
@@ -351,7 +351,7 @@ function incendioComp() {
     playerstamina = playerstamina - 5
     backgroundRed()
     stun()
-    spell.innerHTML = "Computer used Incendio and deals 5 damage! 💥";
+    spell.innerHTML = "Computer used Incendio and deals 5 damage!";
     chanceMsg.innerHTML = `10 Damage chance 2 turns: ${stun()}`;
     pStamina.innerHTML = playerstamina;
 }
@@ -360,7 +360,7 @@ function depulsoComp() {
     playerstamina = playerstamina - 17
     backgroundRed()
     stun()
-    spell.innerHTML = "Computer used Depulso and deals 17 damage! 💥";
+    spell.innerHTML = "Computer used Depulso and deals 17 damage!";
     pStamina.innerHTML = playerstamina;
 }
 
@@ -368,7 +368,7 @@ function confringoComp() {
     playerstamina = playerstamina - 5
     backgroundRed()
     stun()
-    spell.innerHTML = "Computer used Confringo and deals 5 damage! 💥";
+    spell.innerHTML = "Computer used Confringo and deals 5 damage!";
     chanceMsg.innerHTML = `Stun chance 2 turns: ${stun()}`;
     pStamina.innerHTML = playerstamina;
 }
@@ -377,7 +377,7 @@ function rictusempraComp() {
     playerstamina = playerstamina - 10
     backgroundBlue()
     stun()
-    spell.innerHTML = "Computer used Rictusempra and deals 10 damage! 💥";
+    spell.innerHTML = "Computer used Rictusempra and deals 10 damage!";
     chanceMsg.innerHTML = `Stun chance 1 turn: ${stun()}`;
     pStamina.innerHTML = playerstamina;
 }
@@ -385,7 +385,7 @@ function rictusempraComp() {
 function flipendoComp() {
     playerstamina = playerstamina - 15
     backgroundBlue()
-    spell.innerHTML = "Computer used Flipendo and deals 15 damage! 💥";
+    spell.innerHTML = "Computer used Flipendo and deals 15 damage!";
     pStamina.innerHTML = playerstamina;
 }
 
@@ -393,7 +393,7 @@ function immobulusComp() {
     playerstamina = playerstamina - 5
     backgroundBlue()
     stun()
-    spell.innerHTML = "Computer used Immmobulus and deals 5 damage! 💥";
+    spell.innerHTML = "Computer used Immmobulus and deals 5 damage!";
     chanceMsg.innerHTML = `Stun chance 2 turns: ${stun()}`;
     pStamina.innerHTML = playerstamina;
 }
@@ -402,7 +402,7 @@ function diffindoComp() {
     playerstamina = playerstamina - 6
     backgroundBlue()
     stun()
-    spell.innerHTML = "Computer used Diffindo and deals 6 damage! 💥";
+    spell.innerHTML = "Computer used Diffindo and deals 6 damage!";
     chanceMsg.innerHTML = `3 Damage chance 8 turns: ${stun()}`;
     pStamina.innerHTML = playerstamina;
 }
@@ -410,7 +410,7 @@ function diffindoComp() {
 function wiggenweldComp() {
     compstamina = compstamina + 5
     backgroundYellow()
-    spell.innerHTML = "Computer used Wiggenweld Potion and increases stamina by 5 points! 🟢";
+    spell.innerHTML = "Computer used Wiggenweld Potion and increases stamina by 5 points!";
     chanceMsg.innerHTML = `6 Heal chance 2 turns: ${stun()}`;
     cStamina.innerHTML = compstamina;
     userMaxstamina()
@@ -420,7 +420,7 @@ function episkeyComp() {
     compstamina = compstamina + 10
     backgroundYellow()
     stun()
-    spell.innerHTML = "Computer used Episkey and increases stamina by 10 points! 🟢";
+    spell.innerHTML = "Computer used Episkey and increases stamina by 10 points!";
     chanceMsg.innerHTML = `5 Heal chance 2 turns: ${stun()}`;
     cStamina.innerHTML = compstamina;
     userMaxstamina()
@@ -430,7 +430,7 @@ function petrificusComp() {
     playerstamina = playerstamina - 5
     backgroundYellow()
     stun()
-    spell.innerHTML = "Computer used Petrificus Totalus and deals 5 damage! 💥";
+    spell.innerHTML = "Computer used Petrificus Totalus and deals 5 damage!";
     chanceMsg.innerHTML = `Stun chance 2 turns: ${stun()}`;
     pStamina.innerHTML = playerstamina;
 }
@@ -439,7 +439,7 @@ function bombardaComp() {
     playerstamina = playerstamina - 10
     backgroundYellow()
     stun()
-    spell.innerHTML = "Computer used Bombarda and deals 5 damage! 💥";
+    spell.innerHTML = "Computer used Bombarda and deals 5 damage!";
     chanceMsg.innerHTML = `10 Damage and Stun chance 1 turn: ${stun()}`;
     pStamina.innerHTML = playerstamina;
 }
