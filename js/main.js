@@ -77,14 +77,14 @@ function play(userPlay) {
 
     if (userPlay === 'Defensive') {
         if (compChoice === 'Defensive') {
-            winner.innerHTML = "🟡 It's a tie! 😮 🟡";
+            winner.innerHTML = "🟡 It's a tie! 🟡";
             spell.innerHTML = ''
             chanceMsg.innerHTML = ''
             backgroundYellow()
             compstamina++;
             playerstamina++;
         } else if (compChoice === 'Sneaky') {
-            winner.innerHTML = "🟡 Computer wins! 😞 🟦";
+            winner.innerHTML = "🟡 Computer wins! 🟦";
             playerstamina = playerstamina - 2;
             if (compChoiceSpell === '1') {
                 rictusempraComp()
@@ -101,14 +101,14 @@ function play(userPlay) {
             aggressiveSpells.className = "aggressive hidden"
             spell.innerHTML = ''
             chanceMsg.innerHTML = ''
-            winner.innerHTML = "🟡 You win! 😀 🔺 <br> Select a spell:";
+            winner.innerHTML = "🟡 You win! 🔺 <br> Select a spell:";
             playerstamina++;
             compstamina--;
         }
 
     } else if (userPlay === 'Sneaky') {
         if (compChoice === 'Sneaky') {
-            winner.innerHTML = "🟦 It's a tie! 😮 🟦";
+            winner.innerHTML = "🟦 It's a tie! 🟦";
             spell.innerHTML = ''
             chanceMsg.innerHTML = ''
             backgroundBlue()
@@ -120,10 +120,10 @@ function play(userPlay) {
             aggressiveSpells.className = "aggressive hidden"
             spell.innerHTML = ''
             chanceMsg.innerHTML = ''
-            winner.innerHTML = "🟦 You win! 😀 🟡 <br> Select a spell:";
+            winner.innerHTML = "🟦 You win! 🟡 <br> Select a spell:";
             compstamina = compstamina - 2
         } else if (compChoice === 'Aggressive') {
-            winner.innerHTML = "🟦 Computer wins! 😞 🔺";
+            winner.innerHTML = "🟦 Computer wins! 🔺";
             playerstamina = playerstamina - 2;
             if (compChoiceSpell === '1') {
                 expelliarmusComp()
@@ -137,12 +137,12 @@ function play(userPlay) {
         }
     } else if (userPlay === 'Aggressive') {
         if (compChoice === 'Aggressive') {
-            winner.innerHTML = "🔺 It's a tie! 😮 🔺";
+            winner.innerHTML = "🔺 It's a tie! 🔺";
             spell.innerHTML = ''
             chanceMsg.innerHTML = ''
             backgroundRed()
         } else if (compChoice === 'Defensive') {
-            winner.innerHTML = "🔺 Computer wins! 😞 🟡";
+            winner.innerHTML = "🔺 Computer wins! 🟡";
             playerstamina = playerstamina - 2;
             if (compChoiceSpell === '1') {
                 wiggenweldComp()
@@ -159,7 +159,7 @@ function play(userPlay) {
             aggressiveSpells.className = "aggressive"
             spell.innerHTML = ''
             chanceMsg.innerHTML = ''
-            winner.innerHTML = "🔺 You win! 😀 🟦 <br> Select a spell:";
+            winner.innerHTML = "🔺 You win! 🟦 <br> Select a spell:";
             compstamina = compstamina - 2;
         }
     }
