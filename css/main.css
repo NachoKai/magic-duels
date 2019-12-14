@@ -1,12 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
 * {
-  font-family: 'VT323', monospace !important;
+  font-family: "VT323", monospace !important;
   font-weight: lighter !important;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: all 0.3s ease;
+  box-sizing: border-box;
   transition: all 0.3s ease;
   user-select: none;
   -moz-user-select: none;
@@ -14,42 +12,37 @@
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   background-image: url("https://i.ibb.co/fnYmCC3/back1.jpg");
   background-size: cover;
   color: #fff;
   text-align: center;
 }
-
 u {
   text-decoration: underline;
   margin-top: 2em;
 }
-
 p {
   font-size: 1.5em;
+  margin-bottom: 0px !important;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
 }
-
 .container {
   color: #fff;
   min-width: 98vw;
   min-height: calc(100vh - 21px);
 }
-
 .stamina-board {
   padding-top: 10px;
 }
-
 .spells {
   padding-top: 10px;
   font-size: 20px;
 }
-
 .gamebox {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -58,49 +51,34 @@ p {
   margin-right: auto;
   background-color: #000;
   max-width: 650px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
   color: #fff;
   text-align: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   flex-direction: column;
 }
-
 .title {
   font-weight: bold;
   padding-bottom: 5px;
   font-size: 3rem;
 }
-
 .fa {
   font-size: 1.5em;
   cursor: pointer;
   margin: 0.25em;
 }
-
 #defensive {
   cursor: pointer;
 }
-
 #sneaky {
   cursor: pointer;
 }
-
 #aggressive {
   cursor: pointer;
 }
-
 #reset {
   line-height: 100%;
   height: 40px;
@@ -110,53 +88,43 @@ p {
   max-width: 100px;
   text-align: center;
 }
-
 #resethover {
   cursor: pointer;
   border: solid 1px #fff;
 }
-
 .stamina-board {
   min-width: 200px;
   padding: 5px;
   font-size: 12px;
 }
-
 #winner {
   font-weight: bold;
 }
-
 tbody {
   border-radius: 5px;
 }
-
 .computeranswer {
   margin-top: 10px;
   border: 2px inset #fff;
   text-align: center;
 }
-
 table {
   font-size: 0.7em;
   border: 3px solid #fff;
   margin: auto;
 }
-
 th {
   font-size: 2em;
   border-bottom: 2px inset black;
 }
-
 td,
 h5 {
   font-size: 1.5em;
 }
-
 td,
 td {
-  padding: .50em;
+  padding: 0.5em;
 }
-
 button {
   border: 2px solid #000;
   background: #fff;
@@ -164,31 +132,23 @@ button {
   margin: 1em;
   cursor: pointer;
 }
-
 button:hover {
   background: #000;
   color: #fff;
   border: 2px solid #000;
 }
-
 footer {
   background-color: #000 !important;
   color: #fff;
   border-top: solid 1px #fff;
   height: 21px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: flex-end;
+  justify-content: center;
   text-align: center;
 }
-
 footer a {
   color: #fff;
 }
-
 .gameVictory {
   background-color: green;
   color: white;
@@ -198,7 +158,6 @@ footer a {
   margin-right: auto;
   max-width: 650px;
 }
-
 .gameOver {
   background-color: red;
   color: white;
@@ -208,19 +167,15 @@ footer a {
   margin-right: auto;
   max-width: 650px;
 }
-
 .hidden {
   display: none;
 }
-
 .pick:hover {
   cursor: pointer;
 }
-
 .pick:active {
   width: 95%;
 }
-
 @media screen and (min-width: 0px) and (max-width: 320px) {
   img {
     max-width: 50%;
@@ -247,7 +202,6 @@ footer a {
     font-size: 12px;
   }
 }
-
 @media screen and (min-width: 320px) and (max-width: 480px) {
   img {
     max-width: 60%;
@@ -274,7 +228,6 @@ footer a {
     font-size: 12px;
   }
 }
-
 @media screen and (min-width: 480px) and (max-width: 768px) {
   img {
     max-width: 70%;
@@ -301,7 +254,6 @@ footer a {
     font-size: 14px;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   img {
     max-width: 80%;
@@ -328,7 +280,6 @@ footer a {
     font-size: 16px;
   }
 }
-
 .backgYellow {
   background: yellow !important;
   padding-bottom: 10px;
@@ -338,20 +289,13 @@ footer a {
   margin-left: auto;
   margin-right: auto;
   background-color: #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: #fff;
   text-align: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   flex-direction: column;
 }
-
 .backgBlue {
   background: blue !important;
   padding-bottom: 10px;
@@ -361,20 +305,13 @@ footer a {
   margin-left: auto;
   margin-right: auto;
   background-color: #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: #fff;
   text-align: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   flex-direction: column;
 }
-
 .backgRed {
   background: red !important;
   padding-bottom: 10px;
@@ -384,17 +321,10 @@ footer a {
   margin-left: auto;
   margin-right: auto;
   background-color: #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: #fff;
   text-align: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   flex-direction: column;
 }
-/*# sourceMappingURL=main.css.map */
