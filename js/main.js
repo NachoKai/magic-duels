@@ -87,6 +87,7 @@ function play(userPlay) {
             playerstamina++;
         } else if (compChoice === 'Sneaky') {
             winner.innerHTML = "🟡 Computer wins! 🟦";
+            select.innerHTML = ''
             playerstamina = playerstamina - 2;
             if (compChoiceSpell === '1') {
                 rictusempraComp()
@@ -130,6 +131,7 @@ function play(userPlay) {
             compstamina = compstamina - 2
         } else if (compChoice === 'Aggressive') {
             winner.innerHTML = "🟦 Computer wins! 🔺";
+            select.innerHTML = ''
             playerstamina = playerstamina - 2;
             if (compChoiceSpell === '1') {
                 expelliarmusComp()
@@ -149,6 +151,7 @@ function play(userPlay) {
             backgroundRed()
         } else if (compChoice === 'Defensive') {
             winner.innerHTML = "🔺 Computer wins! 🟡";
+            select.innerHTML = ''
             playerstamina = playerstamina - 2;
             if (compChoiceSpell === '1') {
                 wiggenweldComp()
