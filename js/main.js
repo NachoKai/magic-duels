@@ -590,5 +590,5 @@ function notAllowsClick() {
 /* Auto scroll*/
 
 function autoScroll() {
-    window.scrollBy(0, 1000);
+    window.scrollBy(0, 500);
 }
