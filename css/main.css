@@ -152,7 +152,7 @@ footer a {
   color: #fff;
 }
 .gameVictory {
-  background-color: green;
+  background-color: rgba(0, 177, 106, 0.8) !important;
   color: white;
   text-align: center;
   min-height: calc(100vh - 21px);
@@ -161,7 +161,7 @@ footer a {
   max-width: 650px;
 }
 .gameOver {
-  background-color: red;
+  background-color:  rgb(240, 52, 52, 0.8) !important;
   color: white;
   text-align: center;
   min-height: calc(100vh - 21px);
