@@ -63,7 +63,7 @@ p {
 }
 .title {
   font-weight: bold;
-  padding-bottom: 5px;
+  margin-bottom: 0px !important;
   font-size: 3rem;
 }
 .fa {
