@@ -106,6 +106,7 @@ tbody {
   border-radius: 5px;
 }
 .computeranswer {
+  max-width: 570px !important;
   margin-top: 10px;
   border: 2px inset #fff;
   text-align: center;
