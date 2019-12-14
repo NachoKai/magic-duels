@@ -195,6 +195,7 @@ function resetGame() {
     result.innerHTML = ''
     winner.innerHTML = ''
     spell.innerHTML = ''
+    select.innerHTML = ''
     chanceMsg.innerHTML = ''
     pStamina.innerHTML = playerstamina;
     cStamina.innerHTML = compstamina;
