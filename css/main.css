@@ -4,7 +4,9 @@
   font-weight: lighter !important;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   user-select: none;
   -moz-user-select: none;
@@ -12,38 +14,46 @@
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-image: url("https://i.ibb.co/fnYmCC3/back1.jpg");
   background-size: cover;
   color: #fff;
   text-align: center;
 }
+
 u {
   text-decoration: underline;
   margin-top: 2em;
 }
+
 p {
   font-size: 1.5em;
   margin-bottom: 0px !important;
   margin-left: 10px !important;
   margin-right: 10px !important;
 }
+
 .container {
   color: #fff;
   min-width: 98vw;
   min-height: calc(100vh - 21px);
 }
+
 .stamina-board {
   padding-top: 10px;
 }
+
 .spells {
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 20px;
 }
+
 .gamebox {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -52,33 +62,48 @@ p {
   margin-right: auto;
   background-color: rgba(0, 0, 0, 0.8);
   max-width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  align-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #fff;
   text-align: center;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .title {
   font-weight: bold;
   margin-bottom: 0px !important;
   font-size: 3rem;
 }
+
 .fa {
   font-size: 1.5em;
   cursor: pointer;
   margin: 0.25em;
 }
+
 #defensive {
   cursor: pointer;
 }
+
 #sneaky {
   cursor: pointer;
 }
+
 #aggressive {
   cursor: pointer;
 }
+
 #reset {
   line-height: 50%;
   height: 30px;
@@ -89,44 +114,54 @@ p {
   max-width: 100px;
   text-align: center;
 }
+
 #resethover {
   cursor: pointer;
   border: inset 1px #fff !important;
 }
+
 .stamina-board {
   min-width: 200px;
   padding: 5px;
   font-size: 12px;
 }
+
 #winner {
   font-weight: bold;
 }
+
 tbody {
   border-radius: 5px;
 }
+
 .computeranswer {
   max-width: 570px !important;
   margin-top: 10px;
   border: 2px inset #fff;
   text-align: center;
 }
+
 table {
   font-size: 0.7em;
   border: 3px inset #fff;
   margin: auto;
 }
+
 th {
   font-size: 2em;
   border-bottom: 2px inset black;
 }
+
 td,
 h5 {
   font-size: 1.5em;
 }
+
 td,
 td {
   padding: 0.5em;
 }
+
 button {
   border: 2px inset #000;
   background: #fff;
@@ -134,50 +169,43 @@ button {
   margin: 1em;
   cursor: pointer;
 }
+
 button:hover {
   background: #000;
   color: #fff;
   border: 2px inset #000;
 }
+
 footer {
   background-color: #000 !important;
   color: #fff;
   border-top: inset 1px #fff;
   height: 21px;
-  align-items: flex-end;
-  justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
+
 footer a {
   color: #fff;
 }
-.gameVictory {
-  background-color: rgba(0, 177, 106, 0.8) !important;
-  color: white;
-  text-align: center;
-  min-height: calc(100vh - 21px);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 650px;
-}
-.gameOver {
-  background-color:  rgb(240, 52, 52, 0.8) !important;
-  color: white;
-  text-align: center;
-  min-height: calc(100vh - 21px);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 650px;
-}
+
 .hidden {
   display: none;
 }
+
 .pick:hover {
   cursor: pointer;
 }
+
 .pick:active {
   width: 95%;
 }
+
 @media screen and (min-width: 0px) and (max-width: 320px) {
   .fa {
     max-width: 100px !important;
@@ -207,6 +235,7 @@ footer a {
     font-size: 12px;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .fa {
     max-width: 95px !important;
@@ -240,6 +269,7 @@ footer a {
     font-size: 12px;
   }
 }
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .fa {
     max-width: 130px;
@@ -270,6 +300,7 @@ footer a {
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   img {
     max-width: 80%;
@@ -296,6 +327,7 @@ footer a {
     font-size: 16px;
   }
 }
+
 .backgYellow {
   background: yellow !important;
   padding-bottom: 10px;
@@ -305,13 +337,20 @@ footer a {
   margin-left: auto;
   margin-right: auto;
   background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #fff;
   text-align: center;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   flex-direction: column;
 }
+
 .backgBlue {
   background: blue !important;
   padding-bottom: 10px;
@@ -321,13 +360,20 @@ footer a {
   margin-left: auto;
   margin-right: auto;
   background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #fff;
   text-align: center;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   flex-direction: column;
 }
+
 .backgRed {
   background: red !important;
   padding-bottom: 10px;
@@ -337,10 +383,37 @@ footer a {
   margin-left: auto;
   margin-right: auto;
   background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #fff;
   text-align: center;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   flex-direction: column;
 }
+
+.gameVictory {
+  background-color: rgba(0, 177, 106, 0.8);
+  color: white;
+  text-align: center;
+  min-height: calc(100vh - 21px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 650px;
+}
+
+.gameOver {
+  background-color: rgba(207, 0, 15, 0.8);
+  color: white;
+  text-align: center;
+  min-height: calc(100vh - 21px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 650px;
+}
+/*# sourceMappingURL=main.css.map */

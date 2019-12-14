@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=VT323&display=swap");
+
 * {
   font-family: "VT323", monospace !important;
   font-weight: lighter !important;
@@ -12,38 +13,46 @@
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-image: url("https://i.ibb.co/fnYmCC3/back1.jpg");
   background-size: cover;
   color: #fff;
   text-align: center;
 }
+
 u {
   text-decoration: underline;
   margin-top: 2em;
 }
+
 p {
   font-size: 1.5em;
   margin-bottom: 0px !important;
   margin-left: 10px !important;
   margin-right: 10px !important;
 }
+
 .container {
   color: #fff;
   min-width: 98vw;
   min-height: calc(100vh - 21px);
 }
+
 .stamina-board {
   padding-top: 10px;
 }
+
 .spells {
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 20px;
 }
+
 .gamebox {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -60,25 +69,31 @@ p {
   text-align: center;
   flex-wrap: wrap;
 }
+
 .title {
   font-weight: bold;
   margin-bottom: 0px !important;
   font-size: 3rem;
 }
+
 .fa {
   font-size: 1.5em;
   cursor: pointer;
   margin: 0.25em;
 }
+
 #defensive {
   cursor: pointer;
 }
+
 #sneaky {
   cursor: pointer;
 }
+
 #aggressive {
   cursor: pointer;
 }
+
 #reset {
   line-height: 50%;
   height: 30px;
@@ -89,44 +104,54 @@ p {
   max-width: 100px;
   text-align: center;
 }
+
 #resethover {
   cursor: pointer;
   border: inset 1px #fff !important;
 }
+
 .stamina-board {
   min-width: 200px;
   padding: 5px;
   font-size: 12px;
 }
+
 #winner {
   font-weight: bold;
 }
+
 tbody {
   border-radius: 5px;
 }
+
 .computeranswer {
   max-width: 570px !important;
   margin-top: 10px;
   border: 2px inset #fff;
   text-align: center;
 }
+
 table {
   font-size: 0.7em;
   border: 3px inset #fff;
   margin: auto;
 }
+
 th {
   font-size: 2em;
   border-bottom: 2px inset black;
 }
+
 td,
 h5 {
   font-size: 1.5em;
 }
+
 td,
 td {
   padding: 0.5em;
 }
+
 button {
   border: 2px inset #000;
   background: #fff;
@@ -134,11 +159,13 @@ button {
   margin: 1em;
   cursor: pointer;
 }
+
 button:hover {
   background: #000;
   color: #fff;
   border: 2px inset #000;
 }
+
 footer {
   background-color: #000 !important;
   color: #fff;
@@ -148,154 +175,178 @@ footer {
   justify-content: center;
   text-align: center;
 }
+
 footer a {
   color: #fff;
 }
-.gameVictory {
-  background-color: rgba(0, 177, 106, 0.8) !important;
-  color: white;
-  text-align: center;
-  min-height: calc(100vh - 21px);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 650px;
-}
-.gameOver {
-  background-color:  rgb(240, 52, 52, 0.8) !important;
-  color: white;
-  text-align: center;
-  min-height: calc(100vh - 21px);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 650px;
-}
+
+
 .hidden {
   display: none;
 }
+
 .pick:hover {
   cursor: pointer;
 }
+
 .pick:active {
   width: 95%;
 }
+
 @media screen and (min-width: 0px) and (max-width: 320px) {
   .fa {
     max-width: 100px !important;
   }
+
   img {
     max-width: 50%;
   }
+
   .wand {
     max-width: 15%;
   }
+
   .title {
     font-size: 2.2em;
   }
+
   u {
     font-size: 0.6em;
   }
+
   p {
     font-size: 15px;
   }
+
   .usercontainer {
     font-size: 12px;
   }
+
   .spells {
     font-size: 12px;
   }
+
   .stamina-board {
     font-size: 12px;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .fa {
     max-width: 95px !important;
     font-size: 14px;
   }
+
   .stamina-board {
     font-size: 10px !important;
   }
+
   img {
     max-width: 60%;
   }
+
   .wand {
     max-width: 20%;
   }
+
   .title {
     font-size: 2em;
   }
+
   u {
     font-size: 0.8em;
   }
+
   p {
     font-size: 16px;
   }
+
   .usercontainer {
     font-size: 14px;
   }
+
   .spells {
     font-size: 14px;
   }
+
   .stamina-board {
     font-size: 12px;
   }
 }
+
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .fa {
     max-width: 130px;
     font-size: 20px;
   }
+
   img {
     max-width: 70%;
   }
+
   .wand {
     max-width: 40%;
   }
+
   .title {
     font-size: 2.5em;
   }
+
   u {
     font-size: 1em;
   }
+
   p {
     font-size: 17px;
   }
+
   .usercontainer {
     font-size: 16px;
   }
+
   .spells {
     font-size: 16px;
   }
+
   .stamina-board {
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   img {
     max-width: 80%;
   }
+
   .wand {
     max-width: 60%;
   }
+
   .title {
     font-size: 2.7em;
   }
+
   u {
     font-size: 1.7em;
   }
+
   p {
     font-size: 18px;
   }
+
   .usercontainer {
     font-size: 18px;
   }
+
   .spells {
     font-size: 18px;
   }
+
   .stamina-board {
     font-size: 16px;
   }
 }
+
 .backgYellow {
   background: yellow !important;
   padding-bottom: 10px;
@@ -312,6 +363,7 @@ footer a {
   flex-wrap: wrap;
   flex-direction: column;
 }
+
 .backgBlue {
   background: blue !important;
   padding-bottom: 10px;
@@ -328,6 +380,7 @@ footer a {
   flex-wrap: wrap;
   flex-direction: column;
 }
+
 .backgRed {
   background: red !important;
   padding-bottom: 10px;
@@ -343,4 +396,24 @@ footer a {
   text-align: center;
   flex-wrap: wrap;
   flex-direction: column;
+}
+
+.gameVictory {
+  background-color: rgba(0, 177, 106, 0.8);
+  color: white;
+  text-align: center;
+  min-height: calc(100vh - 21px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 650px;
+}
+
+.gameOver {
+  background-color: rgba(207, 0, 15, 0.8);
+  color: white;
+  text-align: center;
+  min-height: calc(100vh - 21px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 650px;
 }
