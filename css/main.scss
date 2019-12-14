@@ -34,7 +34,7 @@ p {
     font-size: 1.5em;
     margin-bottom: 0px !important;
     margin-left: 10px !important;
-    margin-right: 10px!important;
+    margin-right: 10px !important;
 }
 
 .container {
@@ -211,6 +211,10 @@ footer {
 }
 
 @media screen and (min-width: 0px) and (max-width: 320px) {
+    .fa {
+        max-width: 100px !important;
+    }
+
     img {
         max-width: 50%;
     }
@@ -245,6 +249,15 @@ footer {
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+    .fa {
+        max-width: 95px !important;
+        font-size: 14px;
+    }
+
+    .stamina-board {
+        font-size: 10px !important;
+    }
+
     img {
         max-width: 60%;
     }
@@ -279,6 +292,11 @@ footer {
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
+    .fa {
+        max-width: 130px;
+        font-size: 20px;
+    }
+
     img {
         max-width: 70%;
     }
