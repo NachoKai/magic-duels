@@ -6,6 +6,7 @@ let sneakyBtn = document.getElementById('sneaky')
 let aggressiveBtn = document.getElementById('aggressive')
 let resetBtn = document.getElementById('reset')
 let instructions = document.getElementById('instructions')
+let userContainer = document.getElementById('user-container')
 let aggressiveSpells = document.getElementById('spells-aggressive')
 let defensiveSpells = document.getElementById('spells-defensive')
 let sneakySpells = document.getElementById('spells-sneaky')
@@ -104,7 +105,7 @@ function play(userPlay) {
             chanceMsg.innerHTML = ''
             winner.innerHTML = "🟡 You win! 🔺";
             select.innerHTML = "Select a spell:"
-            autoScroll()
+            userContainer.className = 'hidden'
             playerstamina++;
             compstamina--;
         }
@@ -125,7 +126,7 @@ function play(userPlay) {
             chanceMsg.innerHTML = ''
             winner.innerHTML = "🟦 You win! 🟡";
             select.innerHTML = "Select a spell:"
-            autoScroll()
+            userContainer.className = 'hidden'
             compstamina = compstamina - 2
         } else if (compChoice === 'Aggressive') {
             winner.innerHTML = "🟦 Computer wins! 🔺";
@@ -166,7 +167,7 @@ function play(userPlay) {
             chanceMsg.innerHTML = ''
             winner.innerHTML = "🔺 You win! 🟦";
             select.innerHTML = "Select a spell:"
-            autoScroll()
+            userContainer.className = 'hidden'
             compstamina = compstamina - 2;
         }
     }
@@ -186,6 +187,7 @@ function resetGame() {
     compstamina = 100;
     turn = 0
     updateTurnNumber(turn)
+    userContainer.className = 'usercontainer'
     gamebox.className = "gamebox"
     result.innerHTML = ''
     winner.innerHTML = ''
@@ -507,6 +509,7 @@ function stun() {
 
 /* Change Backgrounds */
 function backgroundRed() {
+    userContainer.className = 'usercontainer'
     setTimeout(function () {
         gamebox.className = "backgRed";
     }, 100);
@@ -520,6 +523,7 @@ function backgroundRed() {
 }
 
 function backgroundBlue() {
+    userContainer.className = 'usercontainer'
     setTimeout(function () {
         gamebox.className = "backgBlue";
     }, 100);
@@ -533,6 +537,7 @@ function backgroundBlue() {
 }
 
 function backgroundYellow() {
+    userContainer.className = 'usercontainer'
     setTimeout(function () {
         gamebox.className = "backgYellow";
     }, 100);
@@ -585,10 +590,4 @@ function notAllowsClick() {
     if (playerTurn === true) {
         return playerTurn = false
     }
-}
-
-/* Auto scroll*/
-
-function autoScroll() {
-    window.scrollBy(0, 500);
 }
