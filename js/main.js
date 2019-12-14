@@ -104,6 +104,7 @@ function play(userPlay) {
             chanceMsg.innerHTML = ''
             winner.innerHTML = "🟡 You win! 🔺";
             select.innerHTML = "Select a spell:"
+            autoScroll()
             playerstamina++;
             compstamina--;
         }
@@ -124,6 +125,7 @@ function play(userPlay) {
             chanceMsg.innerHTML = ''
             winner.innerHTML = "🟦 You win! 🟡";
             select.innerHTML = "Select a spell:"
+            autoScroll()
             compstamina = compstamina - 2
         } else if (compChoice === 'Aggressive') {
             winner.innerHTML = "🟦 Computer wins! 🔺";
@@ -164,6 +166,7 @@ function play(userPlay) {
             chanceMsg.innerHTML = ''
             winner.innerHTML = "🔺 You win! 🟦";
             select.innerHTML = "Select a spell:"
+            autoScroll()
             compstamina = compstamina - 2;
         }
     }
@@ -582,4 +585,10 @@ function notAllowsClick() {
     if (playerTurn === true) {
         return playerTurn = false
     }
+}
+
+/* Auto scroll*/
+
+function autoScroll() {
+    window.scrollBy(0, 1000);
 }
