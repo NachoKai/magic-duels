@@ -182,6 +182,7 @@ function play(userPlay) {
 };
 
 function resetGame() {
+    hideSpellsTable()
     instructions.innerHTML = `Instructions:<br>
     🔺 Aggressive surpasses Sneaky 🟦<br>
     🟦 Sneaky dodge Defensive 🟡<br>
@@ -202,9 +203,6 @@ function resetGame() {
     defensiveBtn.onclick = playDefensive;
     sneakyBtn.onclick = playSneaky;
     aggressiveBtn.onclick = playAggressive;
-    defensiveSpells.className = "defensive hidden"
-    sneakySpells.className = "sneaky hidden"
-    aggressiveSpells.className = "aggressive hidden"
 };
 
 function gameVictory() {
