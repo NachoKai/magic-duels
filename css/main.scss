@@ -8,6 +8,8 @@
   box-sizing: border-box;
   transition: all 0.3s ease;
   user-select: none;
+  margin-left: auto !important;
+  margin-right: auto !important;
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
@@ -182,7 +184,7 @@ footer a {
 
 
 .hidden {
-  display: none;
+display: none;
 }
 
 .pick:hover {
