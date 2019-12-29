@@ -184,7 +184,7 @@ footer a {
 
 
 .hidden {
-display: none;
+  display: none;
 }
 
 .pick:hover {
@@ -196,6 +196,10 @@ display: none;
 }
 
 @media screen and (min-width: 0px) and (max-width: 320px) {
+  .main-title {
+    max-width: 150px !important;
+  }
+
   .fa {
     max-width: 100px !important;
   }
@@ -234,6 +238,10 @@ display: none;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+  .main-title {
+    max-width: 150px !important;
+  }
+
   .fa {
     max-width: 95px !important;
     font-size: 14px;
@@ -277,6 +285,10 @@ display: none;
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
+  .main-title {
+    max-width: 220px !important;
+  }
+
   .fa {
     max-width: 130px;
     font-size: 20px;
