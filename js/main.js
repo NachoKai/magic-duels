@@ -593,3 +593,5 @@ function notAllowsClick() {
         return playerTurn = false
     }
 }
+
+document.getElementById("current-year").innerHTML = new Date().getFullYear();
