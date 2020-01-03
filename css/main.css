@@ -343,14 +343,19 @@ footer a {
   background: yellow !important;
   padding-bottom: 10px;
   padding-top: 10px;
-  min-height: 100vh;
-  max-width: 650px;
+  min-height: calc(100vh - 21px);
   margin-left: auto;
   margin-right: auto;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -359,21 +364,25 @@ footer a {
   text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .backgBlue {
   background: blue !important;
   padding-bottom: 10px;
   padding-top: 10px;
-  min-height: 100vh;
-  max-width: 650px;
+  min-height: calc(100vh - 21px);
   margin-left: auto;
   margin-right: auto;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -382,21 +391,25 @@ footer a {
   text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .backgRed {
   background: red !important;
   padding-bottom: 10px;
   padding-top: 10px;
-  min-height: 100vh;
-  max-width: 650px;
+  min-height: calc(100vh - 21px);
   margin-left: auto;
   margin-right: auto;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -405,7 +418,6 @@ footer a {
   text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .gameVictory {

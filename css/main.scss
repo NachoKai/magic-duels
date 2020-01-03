@@ -365,51 +365,54 @@ footer a {
   background: yellow !important;
   padding-bottom: 10px;
   padding-top: 10px;
-  min-height: 100vh;
-  max-width: 650px;
+  min-height: calc(100vh - 21px);
   margin-left: auto;
   margin-right: auto;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 700px;
   display: flex;
+  align-items: center;
+  align-content: center;
   flex-direction: column;
   color: #fff;
   text-align: center;
   flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .backgBlue {
   background: blue !important;
   padding-bottom: 10px;
   padding-top: 10px;
-  min-height: 100vh;
-  max-width: 650px;
+  min-height: calc(100vh - 21px);
   margin-left: auto;
   margin-right: auto;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 700px;
   display: flex;
+  align-items: center;
+  align-content: center;
   flex-direction: column;
   color: #fff;
   text-align: center;
   flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .backgRed {
   background: red !important;
   padding-bottom: 10px;
   padding-top: 10px;
-  min-height: 100vh;
-  max-width: 650px;
+  min-height: calc(100vh - 21px);
   margin-left: auto;
   margin-right: auto;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.8);
+  max-width: 700px;
   display: flex;
+  align-items: center;
+  align-content: center;
   flex-direction: column;
   color: #fff;
   text-align: center;
   flex-wrap: wrap;
-  flex-direction: column;
 }
 
 .gameVictory {
