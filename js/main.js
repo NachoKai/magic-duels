@@ -72,7 +72,6 @@ function getCompChoiceSpell() {
 }
 
 function play(userPlay) {
-
     let compChoice = getCompChoice();
     let compChoiceSpell = getCompChoiceSpell()
     result.innerHTML = `You: ${userPlay} ⚡ Computer: ${compChoice}`
