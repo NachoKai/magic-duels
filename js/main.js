@@ -27,9 +27,7 @@ sneakyBtn.onclick = playSneaky;
 aggressiveBtn.onclick = playAggressive;
 resetBtn.onclick = resetGame;
 
-function updateTurnNumber(turn) {
-    document.querySelector('#turn').textContent = turn;
-}
+updateTurnNumber = (turn) => document.querySelector('#turn').textContent = turn;
 
 function hideSpellsTable() {
     instructions.innerHTML = ''
