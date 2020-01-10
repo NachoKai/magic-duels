@@ -208,9 +208,9 @@ function gameVictory() {
     if (compstamina <= 0) {
         winner.innerText = msgWin()
         gamebox.className = "gameVictory"
-        defensiveBtn.onclick = function () {};
-        sneakyBtn.onclick = function () {};
-        aggressiveBtn.onclick = function () {};
+        defensiveBtn.onclick = () => {};
+        sneakyBtn.onclick = () => {};
+        aggressiveBtn.onclick = () => {};
     }
 }
 
@@ -220,9 +220,9 @@ function gameOver() {
     if (playerstamina <= 0) {
         winner.innerText = msgLose();
         gamebox.className = "gameOver"
-        defensiveBtn.onclick = function () {};
-        sneakyBtn.onclick = function () {};
-        aggressiveBtn.onclick = function () {};
+        defensiveBtn.onclick = () => {};
+        sneakyBtn.onclick = () => {};
+        aggressiveBtn.onclick = () => {};
     }
 }
 
@@ -509,13 +509,13 @@ function stun() {
 /* Change Backgrounds */
 function backgroundRed() {
     userContainer.className = 'usercontainer'
-    setTimeout(function () {
+    setTimeout(() => {
         gamebox.className = "backgRed";
     }, 100);
-    setTimeout(function () {
+    setTimeout(() => {
         gamebox.className = "gamebox";
     }, 200);
-    setTimeout(function () {
+    setTimeout(() => {
         gameOver()
         gameVictory()
     }, 500);
@@ -523,13 +523,13 @@ function backgroundRed() {
 
 function backgroundBlue() {
     userContainer.className = 'usercontainer'
-    setTimeout(function () {
+    setTimeout(() => {
         gamebox.className = "backgBlue";
     }, 100);
-    setTimeout(function () {
+    setTimeout(() => {
         gamebox.className = "gamebox";
     }, 200);
-    setTimeout(function () {
+    setTimeout(() => {
         gameOver()
         gameVictory()
     }, 500);
@@ -537,13 +537,13 @@ function backgroundBlue() {
 
 function backgroundYellow() {
     userContainer.className = 'usercontainer'
-    setTimeout(function () {
+    setTimeout(() => {
         gamebox.className = "backgYellow";
     }, 100);
-    setTimeout(function () {
+    setTimeout(() => {
         gamebox.className = "gamebox";
     }, 200);
-    setTimeout(function () {
+    setTimeout(() => {
         gameOver()
         gameVictory()
     }, 500);
