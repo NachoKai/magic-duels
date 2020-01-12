@@ -554,7 +554,7 @@ function msgWin() {
     Swal.fire({
         title: "Congratulations!",
         html: `
-    <img class="img-fluid" src="./img/win.jpg" alt="You win">
+    <img class="img-fluid" src="./img/win.png" alt="You win">
     <p class="h4">You won the duel.</p>
     <span><input type="button" value="Reset" class="btn btn-outline-danger"
                 onclick="window.location.reload(false)"></span>`,
@@ -568,7 +568,7 @@ function msgLose() {
     Swal.fire({
         title: "Oops!",
         html: `
-    <img class="img-fluid" src="./img/lose.jpg" alt="You lose">
+    <img class="img-fluid" src="./img/lose.png" alt="You lose">
     <p class="h4">You lost the duel.</p>
     <span><input type="button" value="Reset" class="btn btn-outline-danger"
                 onclick="window.location.reload(false)"></span>`,
