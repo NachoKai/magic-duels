@@ -427,22 +427,36 @@ img {
 
 .gameVictory {
   background-color: rgba(0, 177, 106, 0.8);
-  color: white;
-  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
   min-height: calc(100vh - 21px);
   margin-left: auto;
   margin-right: auto;
-  max-width: 650px;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .gameOver {
   background-color: rgba(207, 0, 15, 0.8);
-  color: white;
-  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
   min-height: calc(100vh - 21px);
   margin-left: auto;
   margin-right: auto;
-  max-width: 650px;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .main-title {
