@@ -338,6 +338,11 @@ footer a {
   }
 }
 
+img {
+  text-align: center;
+  max-width: 450px;
+}
+
 .backgYellow {
   background: yellow !important;
   padding-bottom: 10px;
