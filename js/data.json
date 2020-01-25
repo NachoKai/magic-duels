@@ -1,0 +1,7 @@
+[{
+        "choices": ["Defensive", "Sneaky", "Aggressive"]
+    },
+    {
+        "choiceSpell": ["1", "2", "3", "4"]
+    }
+]

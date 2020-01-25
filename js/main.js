@@ -19,8 +19,29 @@ let playerstamina = 100,
     pStamina = document.getElementById('playerstamina'),
     cStamina = document.getElementById('compstamina'),
     $chance = false,
-    turn = 0
+    turn = 0,
+    url = "./js/data.json",
+    choices = [],
+    choiceSpell = []
 const c = console.log
+
+fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        choices = data[0].choices
+        choiceSpell = data[1].choiceSpell
+        console.log(choices)
+        console.log(choiceSpell)
+    })
+    .catch(err => console.error(err));
+
+// async function loadJSON(url) {
+//     const res = await fetch(url);
+//     return await res.json();
+// }
+// loadJSON(url).then(data => {
+//     console.log(data[0].name);
+// });
 
 defensiveBtn.onclick = playDefensive;
 sneakyBtn.onclick = playSneaky;
@@ -58,13 +79,11 @@ function playAggressive() {
 }
 
 function getCompChoice() {
-    let choices = ['Defensive', 'Sneaky', 'Aggressive'];
     let compChooses = choices[Math.floor(Math.random() * choices.length)];
     return compChooses;
 }
 
 function getCompChoiceSpell() {
-    let choiceSpell = ['1', '2', '3', '4'];
     let compChooseSpell = choiceSpell[Math.floor(Math.random() * choiceSpell.length)];
     return compChooseSpell;
 }
