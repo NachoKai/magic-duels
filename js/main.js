@@ -20,8 +20,8 @@ let playerstamina = 100,
     cStamina = document.getElementById('compstamina'),
     $chance = false,
     turn = 0,
-    // url = "./js/data.json",
-    url = "https://raw.githubusercontent.com/NachoKai/magic-duels/gh-pages/js/data.json",
+    url = "./js/data.json",
+    // url = "https://raw.githubusercontent.com/NachoKai/magic-duels/gh-pages/js/data.json",
     choices = [],
     choiceSpell = []
 const c = console.log
@@ -108,6 +108,7 @@ function play(userPlay) {
                 winner.innerHTML = "🟡 Computer wins! 🟦";
                 select.innerHTML = ''
                 playerstamina = playerstamina - 2;
+
                 switch (compChoiceSpell) {
                     case "1":
                         rictusempraComp()
@@ -121,7 +122,7 @@ function play(userPlay) {
                         diffindoComp();
                         break
                 }
-                case "'Aggressive":
+                case "Aggressive":
                     defensiveSpells.className = "defensive"
                     sneakySpells.className = "sneaky hidden"
                     aggressiveSpells.className = "aggressive hidden"
@@ -132,6 +133,7 @@ function play(userPlay) {
                     userContainer.className = 'hidden'
                     playerstamina++;
                     compstamina--;
+                    break
         }
 
     } else if (userPlay === 'Sneaky') {
