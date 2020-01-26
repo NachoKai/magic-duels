@@ -95,37 +95,43 @@ function play(userPlay) {
     result.innerHTML = `You: ${userPlay} ⚡ Computer: ${compChoice}`
 
     if (userPlay === 'Defensive') {
-        if (compChoice === 'Defensive') {
-            winner.innerHTML = "🟡 It's a tie! 🟡";
-            spell.innerHTML = ''
-            chanceMsg.innerHTML = ''
-            backgroundYellow()
-            compstamina++;
-            playerstamina++;
-        } else if (compChoice === 'Sneaky') {
-            winner.innerHTML = "🟡 Computer wins! 🟦";
-            select.innerHTML = ''
-            playerstamina = playerstamina - 2;
-            if (compChoiceSpell === '1') {
-                rictusempraComp()
-            } else if (compChoiceSpell === '2') {
-                flipendoComp()
-            } else if (compChoiceSpell === '3') {
-                immobulusComp()
-            } else if (compChoiceSpell === '4') {
-                diffindoComp()
-            }
-        } else if (compChoice === 'Aggressive') {
-            defensiveSpells.className = "defensive"
-            sneakySpells.className = "sneaky hidden"
-            aggressiveSpells.className = "aggressive hidden"
-            spell.innerHTML = ''
-            chanceMsg.innerHTML = ''
-            winner.innerHTML = "🟡 You win! 🔺";
-            select.innerHTML = "Select a spell:"
-            userContainer.className = 'hidden'
-            playerstamina++;
-            compstamina--;
+        switch (compChoice) {
+            case "Defensive":
+                winner.innerHTML = "🟡 It's a tie! 🟡";
+                spell.innerHTML = ''
+                chanceMsg.innerHTML = ''
+                backgroundYellow()
+                compstamina++;
+                playerstamina++;
+                break
+            case "Sneaky":
+                winner.innerHTML = "🟡 Computer wins! 🟦";
+                select.innerHTML = ''
+                playerstamina = playerstamina - 2;
+                switch (compChoiceSpell) {
+                    case "1":
+                        rictusempraComp()
+                        break
+                    case "2":
+                        flipendoComp()
+                    case "3":
+                        immobulusComp();
+                        break
+                    case "4":
+                        diffindoComp();
+                        break
+                }
+                case "'Aggressive":
+                    defensiveSpells.className = "defensive"
+                    sneakySpells.className = "sneaky hidden"
+                    aggressiveSpells.className = "aggressive hidden"
+                    spell.innerHTML = ''
+                    chanceMsg.innerHTML = ''
+                    winner.innerHTML = "🟡 You win! 🔺";
+                    select.innerHTML = "Select a spell:"
+                    userContainer.className = 'hidden'
+                    playerstamina++;
+                    compstamina--;
         }
 
     } else if (userPlay === 'Sneaky') {
