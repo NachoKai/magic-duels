@@ -20,20 +20,19 @@ let playerstamina = 100,
     cStamina = document.getElementById('compstamina'),
     $chance = false,
     turn = 0
-const c = console.log
-
 // url = "./js/data.json",
 // url = "https://raw.githubusercontent.com/NachoKai/magic-duels/gh-pages/js/data.json",
 // choices = [],
 // choiceSpell = []
+const c = console.log
 
 // fetch(url)
 //     .then(res => res.json())
 //     .then(data => {
 //         choices = data[0].choices
 //         choiceSpell = data[1].choiceSpell
-//         c(choices)
-//         c(choiceSpell)
+//         console.log(choices)
+//         console.log(choiceSpell)
 //     })
 //     .catch(err => console.error(err));
 
@@ -42,7 +41,7 @@ const c = console.log
 //     return await res.json();
 // }
 // loadJSON(url).then(data => {
-//     c(data[0].name);
+//     console.log(data[0].name);
 // });
 
 defensiveBtn.onclick = playDefensive;
@@ -130,13 +129,75 @@ function play(userPlay) {
             playerstamina++;
             compstamina--;
         }
-
-        userMaxstamina()
-        compMaxstamina()
-        pStamina.innerHTML = playerstamina;
-        cStamina.innerHTML = compstamina;
+    } else if (userPlay === 'Sneaky') {
+        if (compChoice === 'Sneaky') {
+            winner.innerHTML = "🟦 It's a tie! 🟦";
+            spell.innerHTML = ''
+            chanceMsg.innerHTML = ''
+            backgroundBlue()
+            playerstamina--;
+            compstamina--;
+        } else if (compChoice === 'Defensive') {
+            defensiveSpells.className = "defensive hidden"
+            sneakySpells.className = "sneaky"
+            aggressiveSpells.className = "aggressive hidden"
+            spell.innerHTML = ''
+            chanceMsg.innerHTML = ''
+            winner.innerHTML = "🟦 You win! 🟡";
+            select.innerHTML = "Select a spell:"
+            userContainer.className = 'hidden'
+            compstamina = compstamina - 2
+        } else if (compChoice === 'Aggressive') {
+            winner.innerHTML = "🟦 Computer wins! 🔺";
+            select.innerHTML = ''
+            playerstamina = playerstamina - 2;
+            if (compChoiceSpell === '1') {
+                expelliarmusComp()
+            } else if (compChoiceSpell === '2') {
+                incendioComp()
+            } else if (compChoiceSpell === '3') {
+                depulsoComp()
+            } else if (compChoiceSpell === '4') {
+                confringoComp()
+            }
+        }
+    } else if (userPlay === 'Aggressive') {
+        if (compChoice === 'Aggressive') {
+            winner.innerHTML = "🔺 It's a tie! 🔺";
+            spell.innerHTML = ''
+            chanceMsg.innerHTML = ''
+            backgroundRed()
+        } else if (compChoice === 'Defensive') {
+            winner.innerHTML = "🔺 Computer wins! 🟡";
+            select.innerHTML = ''
+            playerstamina = playerstamina - 2;
+            if (compChoiceSpell === '1') {
+                wiggenweldComp()
+            } else if (compChoiceSpell === '2') {
+                episkeyComp()
+            } else if (compChoiceSpell === '3') {
+                petrificusComp()
+            } else if (compChoiceSpell === '4') {
+                bombardaComp()
+            }
+        } else if (compChoice === 'Sneaky') {
+            defensiveSpells.className = "defensive hidden"
+            sneakySpells.className = "sneaky hidden"
+            aggressiveSpells.className = "aggressive"
+            spell.innerHTML = ''
+            chanceMsg.innerHTML = ''
+            winner.innerHTML = "🔺 You win! 🟦";
+            select.innerHTML = "Select a spell:"
+            userContainer.className = 'hidden'
+            compstamina = compstamina - 2;
+        }
     }
-}
+
+    userMaxstamina()
+    compMaxstamina()
+    pStamina.innerHTML = playerstamina;
+    cStamina.innerHTML = compstamina;
+};
 
 function resetGame() {
     hideSpellsTable()
