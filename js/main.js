@@ -108,6 +108,7 @@ function play(userPlay) {
             winner.innerHTML = "🟡 Computer wins! 🟦";
             select.innerHTML = ''
             playerstamina = playerstamina - 2;
+
             if (compChoiceSpell === '1') {
                 rictusempraComp()
             } else if (compChoiceSpell === '2') {
@@ -129,6 +130,8 @@ function play(userPlay) {
             playerstamina++;
             compstamina--;
         }
+
+
     } else if (userPlay === 'Sneaky') {
         if (compChoice === 'Sneaky') {
             winner.innerHTML = "🟦 It's a tie! 🟦";
@@ -197,7 +200,7 @@ function play(userPlay) {
     compMaxstamina()
     pStamina.innerHTML = playerstamina;
     cStamina.innerHTML = compstamina;
-};
+}
 
 function resetGame() {
     hideSpellsTable()
